@@ -3,6 +3,7 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { languages } from '@/lib/languages';
+import { translations } from '@/lib/translations';
 
 const styles = `
   .lang-overlay {
@@ -158,22 +159,24 @@ export default function LanguageOverlay() {
       <style>{styles}</style>
       <div className="lang-modal">
         <div className="lang-header">
-          <div className="lang-logo-mini">SA</div>
-          <h2>Welcome to SevaAI</h2>
+          <div className="lang-logo-mini">NS</div>
+          <h2>Welcome to Namma Sahaya</h2>
           <p>உங்களை வரவேற்கிறோம் • నమస్కారం • ಸುಸ್ವಾಗತ • സ്വാഗതം • स्वागत है</p>
         </div>
         
         <div className="lang-grid">
-          {languages.map((lang) => (
-            <div 
-              key={lang.code} 
-              className="lang-card"
-              onClick={() => setLanguage(lang.code)}
-            >
-              <span className="lang-card-name">{lang.name}</span>
-              <span className="lang-card-local">{lang.localName}</span>
-            </div>
-          ))}
+          {languages
+            .filter(lang => translations[lang.code]) // Only show supported languages
+            .map((lang) => (
+              <div 
+                key={lang.code} 
+                className="lang-card"
+                onClick={() => setLanguage(lang.code)}
+              >
+                <span className="lang-card-name">{lang.name}</span>
+                <span className="lang-card-local">{lang.localName}</span>
+              </div>
+            ))}
         </div>
 
         <div className="lang-footer-text">Empowering Citizens through Technology</div>

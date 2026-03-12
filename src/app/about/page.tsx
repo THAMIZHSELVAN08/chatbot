@@ -10,12 +10,24 @@ export default function AboutPage() {
 
   // Font family based on language
   const fontStyles = {
-    fontFamily: language.code === 'ta' ? 'Noto Sans Tamil, sans-serif' :
-                language.code === 'te' ? 'Noto Sans Telugu, sans-serif' :
-                language.code === 'kn' ? 'Noto Sans Kannada, sans-serif' :
-                language.code === 'ml' ? 'Noto Sans Malayalam, sans-serif' :
-                language.code === 'hi' ? 'Noto Sans Devanagari, sans-serif' :
-                'Poppins, sans-serif'
+    fontFamily:
+      language.code === 'ta'
+        ? 'Noto Sans Tamil, sans-serif'
+        : language.code === 'te'
+        ? 'Noto Sans Telugu, sans-serif'
+        : language.code === 'kn'
+        ? 'Noto Sans Kannada, sans-serif'
+        : language.code === 'ml'
+        ? 'Noto Sans Malayalam, sans-serif'
+        : language.code === 'hi' || language.code === 'mr'
+        ? 'Noto Sans Devanagari, sans-serif'
+        : language.code === 'bn'
+        ? 'Noto Sans Bengali, sans-serif'
+        : language.code === 'or'
+        ? 'Noto Sans Oriya, sans-serif'
+        : language.code === 'pa'
+        ? 'Noto Sans Gurmukhi, sans-serif'
+        : 'Poppins, sans-serif'
   };
 
   return (
@@ -23,7 +35,7 @@ export default function AboutPage() {
       <div className="card-page prose">
         <h1>{t.aboutTitle}</h1>
         <p>
-          <strong>SevaAI</strong> (meaning &quot;Service AI&quot;) is a smart, voice-first digital assistant 
+          <strong>Namma Sahaya</strong> (meaning &quot;Our Help&quot;) is a smart, voice-first digital assistant 
           designed to democratize access to government welfare schemes across India.
         </p>
 
@@ -34,7 +46,7 @@ export default function AboutPage() {
           the most deserving citizens from accessing life-changing benefits.
         </p>
         <p>
-          SevaAI solves this by providing a <strong>voice-first, multilingual interface</strong> that understands regional languages 
+          Namma Sahaya solves this by providing a <strong>voice-first, multilingual interface</strong> that understands regional languages 
           and translates complex government eligibility criteria into simple, actionable steps.
         </p>
 
@@ -52,7 +64,7 @@ export default function AboutPage() {
         {/* ── ACCURACY SECTION ── */}
         <h2>{t.aboutAccuracy}</h2>
         <p>
-          SevaAI is powered by a combination of a curated government-scheme database and a large language model (LLM) 
+          Namma Sahaya is powered by a combination of a curated government-scheme database and a large language model (LLM) 
           for natural language understanding. Here is how our system performs:
         </p>
 
@@ -159,7 +171,7 @@ export default function AboutPage() {
             We believe information is the first step to empowerment. 
             Want to contribute data or partner with us?
           </p>
-          <a href="mailto:contact@sevaai.org" style={{ display: 'inline-block', marginTop: '16px', padding: '10px 24px', background: 'white', color: 'var(--secondary)', borderRadius: 'var(--radius-full)', fontWeight: '700', textDecoration: 'none' }}>
+          <a href="mailto:contact@nammasahaya.org" style={{ display: 'inline-block', marginTop: '16px', padding: '10px 24px', background: 'white', color: 'var(--secondary)', borderRadius: 'var(--radius-full)', fontWeight: '700', textDecoration: 'none' }}>
             Get in Touch
           </a>
         </div>

@@ -2,19 +2,19 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'SevaAI - Pan-India Govt Schemes Assistant',
+  title: 'Namma Sahaya - Pan-India Govt Schemes Assistant',
   description:
-    'Voice-first multilingual chatbot for discovering government schemes across India. Supports Tamil, Telugu, Kannada, Malayalam, Hindi, and English.',
+    'Voice-first multilingual chatbot for discovering government schemes across India. Supports Tamil, Telugu, Kannada, Malayalam, Hindi, English, Bengali, Marathi, Odia, and Punjabi.',
   keywords: [
     'government schemes',
     'India',
-    'SevaAI',
+    'Namma Sahaya',
     'voice assistant',
     'multilingual',
     'chatbot',
   ],
   openGraph: {
-    title: 'SevaAI - Your Government Schemes Assistant',
+    title: 'Namma Sahaya - Your Government Schemes Assistant',
     description:
       'Discover government schemes in your language. Voice-first AI assistant for all Indian citizens.',
     type: 'website',
@@ -35,7 +35,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Noto+Sans+Tamil:wght@300;400;500;600;700&family=Noto+Sans+Telugu:wght@300;400;500;600;700&family=Noto+Sans+Kannada:wght@300;400;500;600;700&family=Noto+Sans+Malayalam:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=Noto+Sans+Oriya:wght@300;400;500;600;700&family=Noto+Sans+Gurmukhi:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
@@ -47,7 +47,7 @@ export default function RootLayout({
         
         <footer className="footer">
           <div className="footer-content">
-            <p>© 2026 SevaAI · AI for Public Service</p>
+            <p>© 2026 Namma Sahaya · AI for Public Service</p>
             <div className="footer-links">
               <a href="/about">About</a>
               <a href="/how-it-works">How It Works</a>

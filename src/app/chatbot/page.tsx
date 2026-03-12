@@ -30,15 +30,22 @@ const styles = `
     --mono: 'DM Mono', monospace;
   }
 
+  .cb-page-wrapper {
+    min-height: calc(100vh - 64px);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+  }
+
   .cb-page {
     font-family: var(--font);
-    min-height: calc(100vh - 64px);
     background: var(--surface);
     display: grid;
     grid-template-columns: 260px 1fr;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 32px;
     gap: 0;
   }
 
@@ -451,12 +458,24 @@ export default function ChatbotPage() {
     setMessages((prev) => [...prev, userMessage]);
     setIsLoading(true);
 
+    // Read saved profile (client-side only) to personalise responses
+    let profile: any = undefined;
+    try {
+      const stored =
+        typeof window !== 'undefined'
+          ? window.localStorage.getItem('seva_ai_profile')
+          : null;
+      if (stored) profile = JSON.parse(stored);
+    } catch {
+      profile = undefined;
+    }
+
     try {
       // Always send the effective language to the API so response is in the right language
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, language: effectiveLang }),
+        body: JSON.stringify({ message: text, language: effectiveLang, profile }),
       });
       const data = await response.json();
       const replyText = data.reply || 'I apologize, but I encountered an issue. Please try again.';
@@ -468,6 +487,7 @@ export default function ChatbotPage() {
         // Reply is always tagged with the effective language
         language: effectiveLang,
         timestamp: new Date(),
+        matchedEligibility: data.matchedEligibility || [],
       }]);
 
       // Auto-speak the reply using the SAME language the user is using
@@ -499,7 +519,8 @@ export default function ChatbotPage() {
   return (
     <>
       <style>{styles}</style>
-      <div className="cb-page">
+      <div className="cb-page-wrapper">
+        <div className="cb-page">
 
         {/* ── SIDEBAR ── */}
         <aside className="cb-sidebar">
@@ -546,9 +567,9 @@ export default function ChatbotPage() {
           {/* Topbar */}
           <div className="cb-topbar">
             <div className="cb-topbar-left">
-              <div className="cb-avatar">SA</div>
+              <div className="cb-avatar">NS</div>
               <div>
-                <div className="cb-agent-name">SevaAI Assistant</div>
+                <div className="cb-agent-name">Namma Sahaya Assistant</div>
                 <div className="cb-agent-status">
                   <span className="cb-status-dot" />
                   Online · Listening in {lang?.name}
@@ -600,10 +621,10 @@ export default function ChatbotPage() {
           <div className="cb-messages">
             {messages.length === 0 ? (
               <div className="cb-welcome">
-                <div className="cb-welcome-mark">SA</div>
+                <div className="cb-welcome-mark">NS</div>
                 <div className="cb-welcome-title">{lang?.greeting || 'Hello!'}</div>
                 <p className="cb-welcome-desc">
-                  I am SevaAI, your AI assistant for government schemes.
+                  I am Namma Sahaya, your AI assistant for government schemes.
                   Ask me anything about eligibility, documents, or how to apply.
                 </p>
               </div>
@@ -666,6 +687,7 @@ export default function ChatbotPage() {
               </button>
             </form>
           </div>
+        </div>
         </div>
       </div>
     </>

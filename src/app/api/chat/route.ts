@@ -4,7 +4,7 @@ import { getLanguageByCode } from '@/lib/languages';
 
 export async function POST(req: NextRequest) {
   try {
-    const { message, language } = await req.json();
+    const { message, language, profile } = await req.json();
 
     if (!message || !language) {
       return NextResponse.json(
@@ -28,6 +28,10 @@ export async function POST(req: NextRequest) {
       kn: 'RESPOND ENTIRELY IN KANNADA (ಕನ್ನಡ). Write EVERY word in Kannada script. DO NOT write anything in English except URLs.',
       ml: 'RESPOND ENTIRELY IN MALAYALAM (മലയാളം). Write EVERY word in Malayalam script. DO NOT write anything in English except URLs.',
       hi: 'RESPOND ENTIRELY IN HINDI (हिंदी). Write EVERY word in Devanagari script. DO NOT write anything in English except URLs.',
+      bn: 'RESPOND ENTIRELY IN BENGALI (বাংলা). Write EVERY word in Bengali script. DO NOT write anything in English except URLs.',
+      mr: 'RESPOND ENTIRELY IN MARATHI (मराठी). Write EVERY word in Devanagari script. DO NOT write anything in English except URLs.',
+      or: 'RESPOND ENTIRELY IN ODIA (ଓଡ଼ିଆ). Write EVERY word in Odia script. DO NOT write anything in English except URLs.',
+      pa: 'RESPOND ENTIRELY IN PUNJABI (ਪੰਜਾਬੀ). Write EVERY word in Gurmukhi script. DO NOT write anything in English except URLs.',
       en: 'Respond in simple, clear English. Avoid jargon.',
     };
 
@@ -38,16 +42,54 @@ export async function POST(req: NextRequest) {
       kn: { benefit: 'ಪ್ರಯೋಜನ', elig: 'ಅರ್ಹತೆ', docs: 'ದಾಖಲೆಗಳು', steps: 'ಅರ್ಜಿ ಸಲ್ಲಿಕೆ', link: 'ಅಧಿಕೃತ ಲಿಂಕ್' },
       ml: { benefit: 'ആനുകൂല്യം', elig: 'യോഗ്യത', docs: 'രേഖകൾ', steps: 'അപേക്ഷ നടപടി', link: 'ഔദ്യോഗിക ലിങ്ക്' },
       hi: { benefit: 'लाभ', elig: 'पात्रता', docs: 'दस्तावेज़', steps: 'कैसे आवेदन करें', link: 'आधिकारिक लिंक' },
+      bn: { benefit: 'সুবিধা', elig: 'যোগ্যতা', docs: 'প্রয়োজনীয় নথি', steps: 'আবেদন করার নিয়ম', link: 'সরকারি লিঙ্ক' },
+      mr: { benefit: 'लाभ', elig: 'पात्रता', docs: 'कागदपत्रे', steps: 'अर्ज कसा करायचा', link: 'अधिकृत लिंक' },
+      or: { benefit: 'ଲାଭ', elig: 'ଯୋଗ୍ୟତା', docs: 'ଦଲିଲପତ୍ର', steps: 'ଆବେଦନ ପ୍ରକ୍ରିୟା', link: 'ଅଧିକୃତ ଲିଙ୍କ୍' },
+      pa: { benefit: 'ਫ਼ਾਇਦਾ', elig: 'ਯੋਗਤਾ', docs: 'ਦਸਤਾਵੇਜ਼', steps: 'ਅਰਜ਼ੀ ਦੀ ਪ੍ਰਕਿਰਿਆ', link: 'ਆਧਿਕਾਰਿਕ ਲਿੰਕ' },
       en: { benefit: 'Benefit', elig: 'Eligibility', docs: 'Documents', steps: 'How to Apply', link: 'Official Link' },
     };
 
     const lbl = sectionLabels[language] || sectionLabels.en;
     const langRule = languageInstructions[language] || languageInstructions.en;
 
+    // 1. Detect if the user is asking about eligibility
+    const eligibilityKeywords = ['eligible', 'qualify', 'can i get', 'th தகுதி', 'అర్హత', 'ಅರ್ಹತೆ', 'അർഹത', 'पात्रता'];
+    const isEligibilityQuery = eligibilityKeywords.some(k => message.toLowerCase().includes(k));
+
+    let profileContext = '';
+    let matchedEligibility: any[] = [];
+
+    if (profile) {
+      const parts: string[] = [];
+      if (profile.age) parts.push(`${profile.age}-year-old`);
+      if (profile.gender) parts.push(profile.gender.toLowerCase());
+      if (profile.occupation) parts.push(profile.occupation.toLowerCase());
+      if (profile.state) parts.push(`from ${profile.state}`);
+      const summary = parts.length > 0 ? parts.join(' ') : 'citizen';
+      profileContext = `USER PROFILE CONTEXT: The user is a ${summary}. Use this to tailor which schemes you emphasise and how you explain eligibility.\n`;
+
+      if (isEligibilityQuery) {
+        // Run a mini eligibility check
+        const response = await fetch(`${req.nextUrl.origin}/api/eligibility`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ...profile, language }),
+        });
+        if (response.ok) {
+          matchedEligibility = await response.json();
+          matchedEligibility = matchedEligibility.slice(0, 3); // Top 3
+        }
+      }
+    }
+
     const systemPrompt = [
       `⚠️ LANGUAGE RULE (HIGHEST PRIORITY): ${langRule}`,
       '',
-      `You are "SevaAI", a highly accurate and friendly Pan-India government schemes assistant.`,
+      `You are "Namma Sahaya", a highly accurate and friendly Pan-India government schemes assistant.`,
+      '',
+      profileContext,
+      '',
+      isEligibilityQuery ? `The user is specifically asking about their eligibility. I have already run a background check. You can mention that you've calculated their match scores.` : '',
       '',
       `⚠️ TRANSLATION DUTY: The scheme data below is stored in English. You MUST translate EVERY piece of information — benefits, eligibility criteria, document names, application steps — into ${lang.name}. Do NOT copy-paste English text. Only URLs may stay in English.`,
       '',
@@ -103,6 +145,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({
           reply: data.choices[0].message.content,
           schemes: relevantSchemes.slice(0, 5),
+          matchedEligibility,
         });
       }
     }
@@ -113,6 +156,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       reply: fallbackReply,
       schemes: relevantSchemes.slice(0, 5),
+      matchedEligibility,
     });
   } catch (error) {
     console.error('Chat API error:', error);
@@ -134,21 +178,25 @@ function generateFallbackResponse(
     kn: 'ನಮಸ್ಕಾರ!',
     ml: 'നമസ്കാരം!',
     hi: 'नमस्ते!',
+    bn: 'নমস্কার!',
+    mr: 'नमस्कार!',
+    or: 'ନମସ୍କାର!',
+    pa: 'ਸਤ ਸ੍ਰੀ ਅਕਾਲ!',
     en: 'Hello!',
   };
 
   // Localized labels for scheme fields
   const labels: Record<string, Record<string, string>> = {
-    benefit:     { ta: 'ஆதாயம்', te: 'ప్రయోజనం', kn: 'ಪ್ರಯೋಜನ', ml: 'ആനുകൂല്യം', hi: 'लाभ', en: 'Benefit' },
-    eligibility: { ta: 'தகுதி', te: 'అర్హత', kn: 'ಅರ್ಹತೆ', ml: 'യോഗ്യത', hi: 'पात्रता', en: 'Eligibility' },
-    documents:   { ta: 'ஆவணங்கள்', te: 'పత్రాలు', kn: 'ದಾಖಲೆಗಳು', ml: 'രേഖകൾ', hi: 'दस्तावेज़', en: 'Documents' },
-    steps:       { ta: 'விண்ணப்பிக்கும் முறை', te: 'దరఖాస్తు విధానం', kn: 'ಅರ್ಜಿ ಸಲ್ಲಿಕೆ', ml: 'അപേക്ഷ നടപടി', hi: 'कैसे आवेदन करें', en: 'How to Apply' },
-    link:        { ta: 'அதிகாரப்பூர்வ இணைப்பு', te: 'అధికారిక లింక్', kn: 'ಅಧಿಕೃತ ಲಿಂಕ್', ml: 'ഔദ്യോഗിക ലിങ്ക്', hi: 'आधिकारिक लिंक', en: 'Official Link' },
+    benefit:     { ta: 'ஆதாயம்', te: 'ప్రయోజనం', kn: 'ಪ್ರಯೋಜನ', ml: 'ആനുകൂല്യം', hi: 'लाभ', bn: 'সুবিধা', mr: 'लाभ', or: 'ଲାଭ', pa: 'ਫ਼ਾਇਦਾ', en: 'Benefit' },
+    eligibility: { ta: 'தகுதி', te: 'అర్హత', kn: 'ಅರ್ಹತೆ', ml: 'യോഗ്യത', hi: 'पात्रता', bn: 'যোগ্যতা', mr: 'पात्रता', or: 'ଯୋଗ୍ୟତା', pa: 'ਯੋਗਤਾ', en: 'Eligibility' },
+    documents:   { ta: 'ஆவணங்கள்', te: 'పత్రాలు', kn: 'ದಾಖಲೆಗಳು', ml: 'രേഖകൾ', hi: 'दस्तावेज़', bn: 'প্রয়োজনীয় নথি', mr: 'कागदपत्रे', or: 'ଦଲିଲପତ୍ର', pa: 'ਦਸਤਾਵੇਜ਼', en: 'Documents' },
+    steps:       { ta: 'விண்ணப்பிக்கும் முறை', te: 'దరఖాస్తు విధానం', kn: 'ಅರ್ಜಿ ಸಲ್ಲಿಕೆ', ml: 'അപേക്ഷ നടപടി', hi: 'कैसे आवेदन करें', bn: 'আবেদন করার নিয়ম', mr: 'अर्ज कसा करायचा', or: 'ଆବେଦନ ପ୍ରକ୍ରିୟା', pa: 'ਅਰਜ਼ੀ ਦੀ ਪ੍ਰਕਿਰਿਆ', en: 'How to Apply' },
+    link:        { ta: 'அதிகாரப்பூர்வ இணைப்பு', te: 'అధికారిక లింక్', kn: 'ಅಧಿಕೃತ ಲಿಂಕ್', ml: 'ഔദ്യോഗിക ലിങ്ക്', hi: 'आधिकारिक लिंक', bn: 'সরকারি লিঙ্ক', mr: 'अधिकृत लिंक', or: 'ଅଧିକୃତ ଲିଙ୍କ୍', pa: 'ਆਧਿਕਾਰਿਕ ਲਿੰਕ', en: 'Official Link' },
   };
 
   const L = (key: string) => labels[key]?.[language] ?? labels[key]?.en ?? key;
   const greeting = greetings[language] || greetings.en;
-  const isLocal = ['ta', 'te', 'kn', 'ml', 'hi'].includes(language);
+  const isLocal = ['ta', 'te', 'kn', 'ml', 'hi', 'bn', 'mr', 'or', 'pa'].includes(language);
 
   if (schemes.length === 0) {
     const noResult: Record<string, string> = {
@@ -195,6 +243,10 @@ function generateFallbackResponse(
     kn: `${greeting} ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಗಮನಿಸಿದಾಗ ಈ ಕೆಳಗಿನ ಯೋಜನೆಗಳು ಸೂಕ್ತವಾಗಿವೆ:\n\n`,
     ml: `${greeting} നിങ്ങളുടെ ചോദ്യവുമായി ബന്ധപ്പെട്ട പദ്ധതികൾ:\n\n`,
     hi: `${greeting} आपके प्रश्न से संबंधित योजनाएं:\n\n`,
+    bn: `${greeting} আপনার প্রশ্নের সাথে সম্পর্কিত কিছু সরকারি প্রকল্প:\n\n`,
+    mr: `${greeting} आपल्या प्रश्नाशी संबंधित काही योजना:\n\n`,
+    or: `${greeting} ଆପଣଙ୍କ ପ୍ରଶ୍ନ ସହ ଜଡିତ କିଛି ସରକାରୀ ଯୋଜନା:\n\n`,
+    pa: `${greeting} ਤੁਹਾਡੇ ਸਵਾਲ ਨਾਲ ਸੰਬੰਧਿਤ ਕੁਝ ਯੋਜਨਾਵਾਂ:\n\n`,
     en: `${greeting} Here are relevant schemes for your query:\n\n`,
   };
 

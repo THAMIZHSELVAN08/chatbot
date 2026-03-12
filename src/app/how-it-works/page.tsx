@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -15,8 +16,14 @@ export default function HowItWorksPage() {
         ? 'Noto Sans Kannada, sans-serif'
         : language.code === 'ml'
         ? 'Noto Sans Malayalam, sans-serif'
-        : language.code === 'hi'
+        : language.code === 'hi' || language.code === 'mr'
         ? 'Noto Sans Devanagari, sans-serif'
+        : language.code === 'bn'
+        ? 'Noto Sans Bengali, sans-serif'
+        : language.code === 'or'
+        ? 'Noto Sans Oriya, sans-serif'
+        : language.code === 'pa'
+        ? 'Noto Sans Gurmukhi, sans-serif'
         : 'Poppins, sans-serif',
   };
 
@@ -48,7 +55,7 @@ export default function HowItWorksPage() {
       <div className="card-page prose">
         <h1>How The System Works</h1>
         <p>
-          SevaAI uses state-of-the-art Artificial Intelligence to bridge the gap between complex government 
+          Namma Sahaya uses state-of-the-art Artificial Intelligence to bridge the gap between complex government 
           documentation and the citizens who need assistance.
         </p>
 

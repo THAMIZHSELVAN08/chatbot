@@ -1,12 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SchemeCard from '@/components/SchemeCard';
-import {
-  Scheme,
-  findSchemesByProfile,
-  getAllOccupations,
-} from '@/lib/schemes';
+import { Scheme, findSchemesByProfile, getAllOccupations } from '@/lib/schemes';
 
 const states = [
   { code: 'All', label: 'All States' },
@@ -33,6 +29,35 @@ export default function SchemeFinder() {
   const [isLoading, setIsLoading] = useState(false);
 
   const occupations = getAllOccupations();
+
+  // Pre-fill from saved citizen profile if available
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const stored = localStorage.getItem('seva_ai_profile');
+      if (!stored) return;
+      const profile = JSON.parse(stored) as {
+        age?: string | number;
+        state?: string;
+        incomeRange?: string;
+        occupation?: string;
+        gender?: string;
+      };
+      if (profile.age !== undefined) setAge(String(profile.age));
+      if (profile.state) setState(profile.state);
+      if (profile.incomeRange) {
+        const numeric = parseInt(
+          String(profile.incomeRange).replace(/\D/g, ''),
+          10
+        );
+        if (!Number.isNaN(numeric)) setIncome(String(numeric));
+      }
+      if (profile.occupation) setOccupation(profile.occupation);
+      if (profile.gender) setGender(profile.gender);
+    } catch {
+      // ignore
+    }
+  }, []);
 
   // Font family based on language
   const fontStyles = {

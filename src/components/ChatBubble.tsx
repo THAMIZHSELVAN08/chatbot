@@ -1,6 +1,8 @@
 'use client';
-
 import React from 'react';
+import Link from 'next/link';
+import EligibilityResultCard from './EligibilityResultCard';
+import { getSchemeById } from '@/lib/schemes';
 
 export interface Message {
   id: string;
@@ -9,6 +11,7 @@ export interface Message {
   language: string;
   timestamp: Date;
   isVoice?: boolean;
+  matchedEligibility?: any[];
 }
 
 interface ChatBubbleProps {
@@ -40,6 +43,41 @@ export default function ChatBubble({ message, onSpeak, onStop, isSpeaking }: Cha
             </React.Fragment>
           ))}
         </div>
+
+        {message.role === 'assistant' && message.matchedEligibility && message.matchedEligibility.length > 0 && (
+          <div className="mt-4 space-y-4">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="h-px bg-slate-100 flex-1" />
+              <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Match Score Analysis</span>
+              <span className="h-px bg-slate-100 flex-1" />
+            </div>
+            <div className="grid gap-3">
+              {message.matchedEligibility.map((res: any) => {
+                const scheme = getSchemeById(res.schemeId);
+                if (!scheme) return null;
+                return (
+                  <div key={res.schemeId} className="scale-95 origin-top opacity-90 hover:opacity-100 hover:scale-100 transition-all">
+                    <EligibilityResultCard 
+                      scheme={scheme} 
+                      score={res.score} 
+                      reason={res.reason} 
+                      missingCriteria={res.missingCriteria} 
+                    />
+                  </div>
+                );
+              })}
+            </div>
+            <div className="pt-2">
+              <Link 
+                href="/eligibility" 
+                className="block text-center py-2.5 bg-indigo-50 text-indigo-600 text-xs font-bold rounded-xl hover:bg-indigo-100 transition-colors"
+              >
+                Check Full Eligibility →
+              </Link>
+            </div>
+          </div>
+        )}
+
         <div className="bubble-meta" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '8px' }}>
           <span className="bubble-time">
             {message.timestamp.toLocaleTimeString([], {

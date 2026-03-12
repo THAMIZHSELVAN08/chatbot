@@ -6,13 +6,14 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { languages } from '@/lib/languages';
+import { translations } from '@/lib/translations';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/chatbot', label: 'AI Chat' },
-  { href: '/find-schemes', label: 'Scheme Finder' },
-  { href: '/how-it-works', label: 'How It Works' },
-  { href: '/about', label: 'About' },
+  { href: '/', labelKey: 'home' },
+  { href: '/chatbot', labelKey: 'startChat' },
+  { href: '/eligibility', labelKey: 'checkEligibility' },
+  { href: '/find-schemes', labelKey: 'findSchemes' },
+  { href: '/alerts', labelKey: 'myAlerts' },
 ];
 
 const styles = `
@@ -103,6 +104,9 @@ const styles = `
     letter-spacing: 0.1px;
     white-space: nowrap;
     transition: color 0.15s, background 0.15s;
+    cursor: pointer;
+    border: none;
+    background: transparent;
   }
   .ns-link:hover {
     color: #4f46e5;
@@ -228,6 +232,45 @@ const styles = `
     50%       { opacity: 0.5; transform: scale(0.8); }
   }
 
+  /* Alert Bell */
+  .ns-alert-center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #f8faff;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    color: #4f46e5;
+    text-decoration: none;
+    transition: all 0.2s;
+    margin: 0 4px;
+  }
+  .ns-alert-center:hover {
+    background: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+  }
+  .ns-alert-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #ef4444;
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+  }
+
   /* ── Hamburger ── */
   .ns-hamburger {
     display: none;
@@ -306,7 +349,7 @@ const styles = `
 
   /* ── Responsive ── */
   @media (max-width: 960px) {
-    .ns-link        { display: none; }
+    .ns-nav-inner .ns-link:not(.ns-auth-btn) { display: none; }
     .ns-sep         { display: none; }
     .ns-status-pill { display: none; }
     .ns-hamburger   { display: flex; }
@@ -323,7 +366,23 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
+  const [alertCount, setAlertCount] = useState(0);
 
+  useEffect(() => {
+    const updateCount = () => {
+      const alerts = JSON.parse(localStorage.getItem('seva_ai_alerts') || '[]');
+      setAlertCount(alerts.length);
+    };
+    updateCount();
+    window.addEventListener('alerts-updated', updateCount);
+    window.addEventListener('storage', updateCount);
+    return () => {
+      window.removeEventListener('alerts-updated', updateCount);
+      window.removeEventListener('storage', updateCount);
+    };
+  }, []);
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   useEffect(() => {
@@ -347,37 +406,31 @@ export default function Navbar() {
       <nav className="ns-nav">
         <div className="ns-nav-inner">
 
-          {/* Left: Logo image beside brand text */}
+          {/* Left: Brand text only */}
           <Link href="/" className="ns-brand">
-            {!logoError ? (
-              <Image
-                src="/logo.png"
-                alt="SevaAI"
-                width={120}
-                height={36}
-                className="ns-brand-logo"
-                priority
-                onError={() => setLogoError(true)}
-              />
-            ) : (
-              <span className="ns-brand-name">SevaAI</span>
-            )}
             <div className="ns-brand-text">
-              <span className="ns-brand-sub">Government Schemes Assistant</span>
+              <span className="ns-brand-name">Namma Sahaya</span>
+              <span className="ns-brand-sub">
+                {(translations[language.code] || translations.en).brandSub}
+              </span>
             </div>
           </Link>
 
           {/* Right: Links + language selector + pill + hamburger */}
           <div className="ns-right">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`ns-link${pathname === link.href ? ' active' : ''}`}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const label = (translations[language.code] || translations.en)[link.labelKey] || link.labelKey;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`ns-link${pathname === link.href ? ' active' : ''}`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+
 
             <div className="ns-lang-selector">
               <button
@@ -396,26 +449,36 @@ export default function Navbar() {
 
               {langOpen && (
                 <div className="ns-lang-dropdown">
-                  {languages.map((l) => (
-                    <div
-                      key={l.code}
-                      className={`ns-lang-option${language.code === l.code ? ' active' : ''}`}
-                      onClick={() => {
-                        setLanguage(l.code);
-                        setLangOpen(false);
-                      }}
-                    >
-                      {l.localName}
-                      {language.code === l.code && (
-                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-                          <path d="M20 6L9 17L4 12" />
-                        </svg>
-                      )}
-                    </div>
-                  ))}
+                  {languages
+                    .filter(l => translations[l.code]) // Only show supported languages
+                    .map((l) => (
+                      <div
+                        key={l.code}
+                        className={`ns-lang-option${language.code === l.code ? ' active' : ''}`}
+                        onClick={() => {
+                          setLanguage(l.code);
+                          setLangOpen(false);
+                        }}
+                      >
+                        {l.localName}
+                        {language.code === l.code && (
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                            <path d="M20 6L9 17L4 12" />
+                          </svg>
+                        )}
+                      </div>
+                    ))}
                 </div>
               )}
             </div>
+
+            <Link href="/alerts" className="ns-alert-center" title="My Alerts">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+              </svg>
+              {alertCount > 0 && <span className="ns-alert-badge">{alertCount}</span>}
+            </Link>
 
             <div className="ns-sep" />
 
@@ -423,6 +486,7 @@ export default function Navbar() {
               <span className="ns-pulse" />
               Voice-First AI
             </div>
+
 
             <button
               className="ns-hamburger"
@@ -448,16 +512,19 @@ export default function Navbar() {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="ns-mobile-menu">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`ns-mobile-link${pathname === link.href ? ' active' : ''}`}
-              onClick={() => setMobileOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) => {
+            const label = (translations[language.code] || translations.en)[link.labelKey] || link.labelKey;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`ns-mobile-link${pathname === link.href ? ' active' : ''}`}
+                onClick={() => setMobileOpen(false)}
+              >
+                {label}
+              </Link>
+            );
+          })}
           <div className="ns-mobile-divider" />
           <div className="ns-mobile-footer">
             <span className="ns-pulse" />

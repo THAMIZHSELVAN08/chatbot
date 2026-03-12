@@ -29,6 +29,10 @@ export async function POST(req: NextRequest) {
           ml: 'ml',
           hi: 'hi',
           en: 'en',
+          bn: 'bn',
+          mr: 'mr',
+          or: 'or',
+          pa: 'pa',
         };
         whisperForm.append('language', whisperLangMap[language] || 'en');
       }

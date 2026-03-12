@@ -20,8 +20,14 @@ export default function FindSchemesPage() {
         ? 'Noto Sans Kannada, sans-serif'
         : language.code === 'ml'
         ? 'Noto Sans Malayalam, sans-serif'
-        : language.code === 'hi'
+        : language.code === 'hi' || language.code === 'mr'
         ? 'Noto Sans Devanagari, sans-serif'
+        : language.code === 'bn'
+        ? 'Noto Sans Bengali, sans-serif'
+        : language.code === 'or'
+        ? 'Noto Sans Oriya, sans-serif'
+        : language.code === 'pa'
+        ? 'Noto Sans Gurmukhi, sans-serif'
         : 'Poppins, sans-serif',
   };
 
