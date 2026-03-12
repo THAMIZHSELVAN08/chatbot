@@ -1,0 +1,3310 @@
+[
+  {
+    "id": "tn-001",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Kalaignar Magalir Urimai Thittam",
+    "name_local": "கலைஞர் மகளிர் உரிமைத் திட்டம்",
+    "category": "Women Empowerment",
+    "min_age": 21,
+    "max_age": 60,
+    "income_limit": 250000,
+    "occupations": [
+      "Worker",
+      "Homemaker",
+      "Self-Employed"
+    ],
+    "eligibility": "Women above 21 years, family income below ₹2.5 lakh/year",
+    "benefit": "₹1,000 per month direct transfer",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Bank Passbook",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Visit tn.gov.in",
+      "Fill online application",
+      "Upload documents",
+      "Verification by officials",
+      "Approval & bank transfer"
+    ],
+    "link": "https://tn.gov.in/kmu",
+    "description_en": "Monthly financial assistance for women empowerment in Tamil Nadu",
+    "description_local": "தமிழ்நாட்டில் பெண்கள் மேம்பாட்டிற்கான மாதாந்திர நிதி உதவி"
+  },
+  {
+    "id": "tn-002",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Tamil Nadu Free Laptop Scheme",
+    "name_local": "தமிழ்நாடு இலவச மடிக்கணினி திட்டம்",
+    "category": "Education",
+    "min_age": 15,
+    "max_age": 25,
+    "income_limit": 500000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students in government schools/colleges, 11th & 12th standard and college students",
+    "benefit": "Free laptop with educational software",
+    "documents": [
+      "School ID Card",
+      "Aadhaar Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "School/college nomination",
+      "Verification of enrollment",
+      "Distribution at institution"
+    ],
+    "link": "https://tn.gov.in/laptop",
+    "description_en": "Free laptops for students to bridge the digital divide",
+    "description_local": "டிஜிட்டல் இடைவெளியை குறைக்க மாணவர்களுக்கு இலவச மடிக்கணினி"
+  },
+  {
+    "id": "tn-003",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Chief Minister's Comprehensive Health Insurance",
+    "name_local": "முதலமைச்சர் விரிவான மருத்துவக் காப்பீடு",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 72000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Student",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "Family annual income below ₹72,000, must have ration card",
+    "benefit": "Free medical treatment up to ₹5 lakh",
+    "documents": [
+      "Ration Card",
+      "Aadhaar Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Visit nearest government hospital",
+      "Show ration card at CMCHIS counter",
+      "Get enrolled",
+      "Receive CMCHIS card"
+    ],
+    "link": "https://www.cmchistn.com",
+    "description_en": "Comprehensive health insurance covering surgeries and treatments",
+    "description_local": "அறுவை சிகிச்சை மற்றும் சிகிச்சைகளை உள்ளடக்கிய விரிவான மருத்துவ காப்பீடு"
+  },
+  {
+    "id": "tn-004",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Pudhumai Penn Scheme",
+    "name_local": "புதுமைப் பெண் திட்டம்",
+    "category": "Education",
+    "min_age": 17,
+    "max_age": 25,
+    "income_limit": 300000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Girl students from government schools who scored above 60% in 12th",
+    "benefit": "₹1,000 per month scholarship for higher education",
+    "documents": [
+      "12th Mark Sheet",
+      "Aadhaar Card",
+      "Community Certificate",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Apply online at tn.gov.in/pudhumaipenn",
+      "Upload mark sheet & certificates",
+      "Verification",
+      "Monthly credit to bank account"
+    ],
+    "link": "https://tn.gov.in/pudhumaipenn",
+    "description_en": "Monthly scholarship for girl students pursuing higher education",
+    "description_local": "உயர்கல்வி பயிலும் மாணவிகளுக்கு மாதாந்திர உதவித்தொகை"
+  },
+  {
+    "id": "tn-005",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Tamil Nadu Housing Board Scheme",
+    "name_local": "தமிழ்நாடு வீட்டு வசதி வாரியம்",
+    "category": "Housing",
+    "min_age": 21,
+    "max_age": 65,
+    "income_limit": 300000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "Economically weaker sections, annual income below ₹3 lakh",
+    "benefit": "Subsidized housing units at 50% cost",
+    "documents": [
+      "Income Certificate",
+      "Aadhaar Card",
+      "Address Proof",
+      "Caste Certificate"
+    ],
+    "steps": [
+      "Apply at TNHB office or online",
+      "Submit income & identity documents",
+      "Allotment process",
+      "Payment in installments"
+    ],
+    "link": "https://tnhb.tn.gov.in",
+    "description_en": "Affordable housing scheme for economically weaker sections",
+    "description_local": "பொருளாதார ரீதியாக பலவீனமான பிரிவினருக்கு மலிவான வீட்டுத் திட்டம்"
+  },
+  {
+    "id": "tn-006",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Uzhavar Sandhai (Farmers Market)",
+    "name_local": "உழவர் சந்தை",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 75,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "All registered farmers in Tamil Nadu",
+    "benefit": "Direct selling platform eliminating middlemen, free stall space",
+    "documents": [
+      "Farmer ID",
+      "Aadhaar Card",
+      "Land Document"
+    ],
+    "steps": [
+      "Register at nearest Uzhavar Sandhai",
+      "Submit farmer ID & land documents",
+      "Get stall allocation",
+      "Start direct selling"
+    ],
+    "link": "https://tn.gov.in/uzhavar",
+    "description_en": "Direct farmer-to-consumer market platform",
+    "description_local": "நேரடி விவசாயி-நுகர்வோர் சந்தை தளம்"
+  },
+  {
+    "id": "tn-007",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Amma Two Wheeler Scheme",
+    "name_local": "அம்மா இரு சக்கர வாகனத் திட்டம்",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 55,
+    "income_limit": 250000,
+    "occupations": [
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Working women with annual income below ₹2.5 lakh",
+    "benefit": "50% subsidy on two-wheeler purchase (max ₹25,000)",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Employment Proof",
+      "DL"
+    ],
+    "steps": [
+      "Apply at District Collectorate",
+      "Submit documents",
+      "Verification",
+      "Subsidy credited after purchase"
+    ],
+    "link": "https://tn.gov.in/twowheeler",
+    "description_en": "Subsidized two-wheelers for working women",
+    "description_local": "வேலை செய்யும் பெண்களுக்கு மானியத்தில் இரு சக்கர வாகனம்"
+  },
+  {
+    "id": "tn-008",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Free Bus Pass for Students",
+    "name_local": "மாணவர்களுக்கு இலவச பேருந்து பயணச்சீட்டு",
+    "category": "Education",
+    "min_age": 5,
+    "max_age": 28,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "All school and college students in Tamil Nadu",
+    "benefit": "Free travel in government buses",
+    "documents": [
+      "Student ID",
+      "Aadhaar Card",
+      "Bonafide Certificate"
+    ],
+    "steps": [
+      "Get bonafide certificate from institution",
+      "Apply at nearest bus depot",
+      "Receive bus pass card"
+    ],
+    "link": "https://tn.gov.in/buspass",
+    "description_en": "Free bus travel for all students in government transport",
+    "description_local": "அரசு போக்குவரத்தில் அனைத்து மாணவர்களுக்கும் இலவச பேருந்து பயணம்"
+  },
+  {
+    "id": "tn-009",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "TN Skill Development Scheme",
+    "name_local": "தமிழ்நாடு திறன் மேம்பாட்டு திட்டம்",
+    "category": "Skill Development",
+    "min_age": 18,
+    "max_age": 35,
+    "income_limit": 500000,
+    "occupations": [
+      "Student",
+      "Unemployed",
+      "Worker"
+    ],
+    "eligibility": "Unemployed youth aged 18-35 with minimum 10th pass",
+    "benefit": "Free skill training + ₹500/day stipend during training",
+    "documents": [
+      "Aadhaar Card",
+      "Education Certificate",
+      "Age Proof"
+    ],
+    "steps": [
+      "Register on TNSDC portal",
+      "Select skill course",
+      "Attend training center",
+      "Receive certification"
+    ],
+    "link": "https://tnsdc.in",
+    "description_en": "Free vocational training for unemployed youth in Tamil Nadu",
+    "description_local": "வேலையில்லா இளைஞர்களுக்கு இலவச தொழிற்பயிற்சி"
+  },
+  {
+    "id": "ap-001",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Asara Scheme",
+    "name_local": "వైఎస్ఆర్ ఆసరా పథకం",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 300000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "Women SHG members with outstanding loans",
+    "benefit": "Loan waiver up to ₹1 lakh for SHG members",
+    "documents": [
+      "SHG Member ID",
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Loan Details"
+    ],
+    "steps": [
+      "Visit Navasakam portal",
+      "Submit SHG membership & loan details",
+      "Verification by officials",
+      "Loan waiver processed"
+    ],
+    "link": "https://navasakam.ap.gov.in",
+    "description_en": "Loan waiver scheme for women self-help groups",
+    "description_local": "మహిళా స్వయం సహాయక బృందాలకు రుణ మాఫీ పథకం"
+  },
+  {
+    "id": "ap-002",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Vidya Deevena",
+    "name_local": "జగనన్న విద్యా దీవెన",
+    "category": "Education",
+    "min_age": 16,
+    "max_age": 30,
+    "income_limit": 250000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students from families with income below ₹2.5 lakh, studying ITI/Polytechnic/Degree",
+    "benefit": "Full fee reimbursement for higher education",
+    "documents": [
+      "Income Certificate",
+      "Aadhaar Card",
+      "College Admission Letter",
+      "Caste Certificate"
+    ],
+    "steps": [
+      "Apply through college",
+      "Submit income & admission proof",
+      "Fee reimbursed to college account"
+    ],
+    "link": "https://jaganannavidyadeevena.ap.gov.in",
+    "description_en": "Complete fee reimbursement for eligible students",
+    "description_local": "అర్హులైన విద్యార్థులకు పూర్తి ఫీజు చెల్లింపు"
+  },
+  {
+    "id": "ap-003",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Cheyutha",
+    "name_local": "వైఎస్ఆర్ చేయూత",
+    "category": "Women Empowerment",
+    "min_age": 45,
+    "max_age": 60,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "Women aged 45-60 from SC/ST/BC/Minority communities",
+    "benefit": "₹18,750 annual financial assistance",
+    "documents": [
+      "Aadhaar Card",
+      "Caste Certificate",
+      "Age Proof",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply at village/ward secretariat",
+      "Submit caste & age proof",
+      "Verification",
+      "Annual payment to bank"
+    ],
+    "link": "https://navasakam.ap.gov.in/cheyutha",
+    "description_en": "Annual financial assistance for middle-aged women",
+    "description_local": "మధ్య వయస్కులైన మహిళలకు వార్షిక ఆర్థిక సహాయం"
+  },
+  {
+    "id": "ap-004",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Pension Kanuka",
+    "name_local": "వైఎస్ఆర్ పెన్షన్ కానుక",
+    "category": "Social Security",
+    "min_age": 60,
+    "max_age": 100,
+    "income_limit": 300000,
+    "occupations": [
+      "Senior Citizen",
+      "Homemaker",
+      "Unemployed"
+    ],
+    "eligibility": "Senior citizens above 60 years, widows, disabled persons",
+    "benefit": "₹2,750 monthly pension",
+    "documents": [
+      "Aadhaar Card",
+      "Age Proof",
+      "Income Certificate",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply at village/ward secretariat",
+      "Submit age & income proof",
+      "Verification by volunteers",
+      "Monthly credit to bank"
+    ],
+    "link": "https://navasakam.ap.gov.in/pension",
+    "description_en": "Monthly pension for senior citizens and vulnerable groups",
+    "description_local": "వృద్ధులకు మరియు అణగారిన వర్గాలకు నెలవారీ పెన్షన్"
+  },
+  {
+    "id": "ap-005",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Rythu Bharosa",
+    "name_local": "వైఎస్ఆర్ రైతు భరోసా",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 75,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "All farmers with agricultural landholding",
+    "benefit": "₹13,500 per year investment support per farmer family",
+    "documents": [
+      "Land Documents",
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Farmer ID"
+    ],
+    "steps": [
+      "Register on RBK portal",
+      "Submit land & identity docs",
+      "Verification",
+      "Amount in 3 installments"
+    ],
+    "link": "https://ysrrythubharosa.ap.gov.in",
+    "description_en": "Annual investment support for farmer families",
+    "description_local": "రైతు కుటుంబాలకు వార్షిక పెట్టుబడి మద్దతు"
+  },
+  {
+    "id": "ap-006",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Aarogyasri",
+    "name_local": "వైఎస్ఆర్ ఆరోగ్యశ్రీ",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 500000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Student",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "Families with income below ₹5 lakh per annum",
+    "benefit": "Free medical treatment up to ₹5 lakh per family per year",
+    "documents": [
+      "Aadhaar Card",
+      "White Ration Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Visit any network hospital",
+      "Show Aarogyasri card",
+      "Get free treatment"
+    ],
+    "link": "https://aarogyasri.ap.gov.in",
+    "description_en": "Health insurance providing cashless treatment in network hospitals",
+    "description_local": "నెట్‌వర్క్ ఆసుపత్రులలో నగదు రహిత చికిత్స అందించే ఆరోగ్య బీమా"
+  },
+  {
+    "id": "ap-007",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Ammavodi",
+    "name_local": "జగనన్న అమ్మ ఒడి",
+    "category": "Education",
+    "min_age": 20,
+    "max_age": 55,
+    "income_limit": 300000,
+    "occupations": [
+      "Homemaker",
+      "Worker"
+    ],
+    "eligibility": "Mothers/guardians of children studying in Class 1-12 in government schools",
+    "benefit": "₹15,000 per year per child for educational expenses",
+    "documents": [
+      "Aadhaar Card",
+      "School Certificate",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register at school",
+      "Submit Aadhaar & bank details",
+      "Annual credit before academic year"
+    ],
+    "link": "https://jaganannaammavodi.ap.gov.in",
+    "description_en": "Financial incentive for mothers to ensure children attend school",
+    "description_local": "పిల్లలు బడికి హాజరయ్యేలా తల్లులకు ఆర్థిక ప్రోత్సాహకం"
+  },
+  {
+    "id": "ka-001",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Gruha Lakshmi Scheme",
+    "name_local": "ಗೃಹ ಲಕ್ಷ್ಮಿ ಯೋಜನೆ",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 500000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Women head of household with BPL card",
+    "benefit": "₹2,000 per month direct transfer",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card (BPL)",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply on Seva Sindhu portal",
+      "Submit BPL card & identity",
+      "Verification",
+      "Monthly bank transfer"
+    ],
+    "link": "https://sevasindhuservices.karnataka.gov.in",
+    "description_en": "Monthly financial assistance for women-headed households",
+    "description_local": "ಮಹಿಳಾ ಮುಖ್ಯಸ್ಥ ಕುಟುಂಬಗಳಿಗೆ ಮಾಸಿಕ ಆರ್ಥಿಕ ನೆರವು"
+  },
+  {
+    "id": "ka-002",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Gruha Jyothi Scheme",
+    "name_local": "ಗೃಹ ಜ್ಯೋತಿ ಯೋಜನೆ",
+    "category": "Utility",
+    "min_age": 18,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "All households with electricity consumption up to 200 units",
+    "benefit": "Free electricity up to 200 units per month",
+    "documents": [
+      "Aadhaar Card",
+      "Electricity Bill",
+      "Ration Card"
+    ],
+    "steps": [
+      "Register on Gruha Jyothi portal",
+      "Submit electricity account & Aadhaar",
+      "Auto-applied to monthly bill"
+    ],
+    "link": "https://gruhajyothi.karnataka.gov.in",
+    "description_en": "Free electricity scheme for Karnataka households",
+    "description_local": "ಕರ್ನಾಟಕ ಕುಟುಂಬಗಳಿಗೆ ಉಚಿತ ವಿದ್ಯುತ್ ಯೋಜನೆ"
+  },
+  {
+    "id": "ka-003",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Anna Bhagya Scheme",
+    "name_local": "ಅನ್ನ ಭಾಗ್ಯ ಯೋಜನೆ",
+    "category": "Food Security",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 200000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Senior Citizen",
+      "Unemployed",
+      "Student"
+    ],
+    "eligibility": "BPL card holders in Karnataka",
+    "benefit": "10 kg free rice per person per month",
+    "documents": [
+      "BPL Ration Card",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Visit nearest Fair Price Shop",
+      "Show BPL ration card",
+      "Collect free rice monthly"
+    ],
+    "link": "https://ahara.kar.nic.in",
+    "description_en": "Free rice distribution to BPL families",
+    "description_local": "ಬಿಪಿಎಲ್ ಕುಟುಂಬಗಳಿಗೆ ಉಚಿತ ಅಕ್ಕಿ ವಿತರಣೆ"
+  },
+  {
+    "id": "ka-004",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Shakti Free Bus Pass",
+    "name_local": "ಶಕ್ತಿ ಉಚಿತ ಬಸ್ ಪಾಸ್",
+    "category": "Transport",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Student",
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "All women in Karnataka",
+    "benefit": "Free travel in KSRTC and BMTC buses",
+    "documents": [
+      "Aadhaar Card",
+      "Shakti Card"
+    ],
+    "steps": [
+      "Apply for Shakti Card at bus depot",
+      "Submit Aadhaar & photo",
+      "Receive Shakti pass",
+      "Travel free on KSRTC/BMTC"
+    ],
+    "link": "https://ksrtc.in/shakti",
+    "description_en": "Free bus travel for all women in Karnataka",
+    "description_local": "ಕರ್ನಾಟಕದ ಎಲ್ಲಾ ಮಹಿಳೆಯರಿಗೆ ಉಚಿತ ಬಸ್ ಪ್ರಯಾಣ"
+  },
+  {
+    "id": "ka-005",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Yuva Nidhi Scheme",
+    "name_local": "ಯುವ ನಿಧಿ ಯೋಜನೆ",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 25,
+    "income_limit": 500000,
+    "occupations": [
+      "Unemployed",
+      "Student"
+    ],
+    "eligibility": "Unemployed graduates aged 18-25 from Karnataka",
+    "benefit": "₹3,000/month (graduates) or ₹1,500/month (diploma holders) for 2 years",
+    "documents": [
+      "Degree Certificate",
+      "Aadhaar Card",
+      "Income Certificate",
+      "Employment Registration"
+    ],
+    "steps": [
+      "Register on Yuva Nidhi portal",
+      "Upload degree & employment proof",
+      "Verification",
+      "Monthly allowance for 2 years"
+    ],
+    "link": "https://yuvanidhi.karnataka.gov.in",
+    "description_en": "Monthly allowance for unemployed youth until they find employment",
+    "description_local": "ಉದ್ಯೋಗ ದೊರೆಯುವವರೆಗೆ ನಿರುದ್ಯೋಗಿ ಯುವಕರಿಗೆ ಮಾಸಿಕ ಭತ್ಯೆ"
+  },
+  {
+    "id": "ka-006",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Rajiv Gandhi Housing Corporation",
+    "name_local": "ರಾಜೀವ್ ಗಾಂಧಿ ವಸತಿ ನಿಗಮ",
+    "category": "Housing",
+    "min_age": 21,
+    "max_age": 65,
+    "income_limit": 32000,
+    "occupations": [
+      "Worker",
+      "Unemployed",
+      "Self-Employed"
+    ],
+    "eligibility": "Homeless families with annual income below ₹32,000 in rural areas",
+    "benefit": "Financial assistance of ₹1.2-5 lakh for house construction",
+    "documents": [
+      "Income Certificate",
+      "Aadhaar Card",
+      "Land Document",
+      "Caste Certificate"
+    ],
+    "steps": [
+      "Apply at Gram Panchayat",
+      "Submit land & income proof",
+      "Selection by committee",
+      "Construction grant in installments"
+    ],
+    "link": "https://ashraya.karnataka.gov.in",
+    "description_en": "Housing assistance for economically weaker sections",
+    "description_local": "ಆರ್ಥಿಕವಾಗಿ ದುರ್ಬಲ ವರ್ಗಗಳಿಗೆ ವಸತಿ ನೆರವು"
+  },
+  {
+    "id": "ka-007",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Raitha Siri Scheme",
+    "name_local": "ರೈತ ಸಿರಿ ಯೋಜನೆ",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 500000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Small and marginal farmers with less than 5 acres of land",
+    "benefit": "₹10,000 per year for crop inputs and seeds",
+    "documents": [
+      "Land Documents",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register on Raita Mitra portal",
+      "Submit land documents",
+      "Receive annual input support"
+    ],
+    "link": "https://raitamitra.karnataka.gov.in",
+    "description_en": "Financial support for small farmers for agricultural inputs",
+    "description_local": "ಸಣ್ಣ ರೈತರಿಗೆ ಕೃಷಿ ಒಳಸುರಿಗಳಿಗೆ ಆರ್ಥಿಕ ಬೆಂಬಲ"
+  },
+  {
+    "id": "kl-001",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "LIFE Mission",
+    "name_local": "ലൈഫ് മിഷൻ",
+    "category": "Housing",
+    "min_age": 21,
+    "max_age": 65,
+    "income_limit": 300000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Unemployed"
+    ],
+    "eligibility": "Homeless and landless families in Kerala",
+    "benefit": "Free house construction worth ₹6 lakh",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Landlessness Certificate"
+    ],
+    "steps": [
+      "Apply at Local Self Government",
+      "Submit landlessness certificate",
+      "Selection by committee",
+      "House construction by LIFE Mission"
+    ],
+    "link": "https://lifemission.kerala.gov.in",
+    "description_en": "Comprehensive housing scheme for homeless families",
+    "description_local": "ഭവനരഹിത കുടുംബങ്ങൾക്കായുള്ള സമഗ്ര ഭവന പദ്ധതി"
+  },
+  {
+    "id": "kl-002",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Kuttanad Package",
+    "name_local": "കുട്ടനാട് പാക്കേജ്",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 500000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Farmers in Kuttanad region affected by floods",
+    "benefit": "Crop insurance and subsidized farming equipment",
+    "documents": [
+      "Farmer ID",
+      "Land Document",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Register at Krishi Bhavan",
+      "Submit flood damage report",
+      "Get insurance & equipment subsidy"
+    ],
+    "link": "https://kerala.gov.in/kuttanad",
+    "description_en": "Agricultural support package for flood-affected Kuttanad region",
+    "description_local": "വെള്ളപ്പൊക്ക ബാധിത കുട്ടനാട് മേഖലയ്ക്കായുള്ള കാർഷിക സഹായ പാക്കേജ്"
+  },
+  {
+    "id": "kl-003",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Snehapoorvam Scheme",
+    "name_local": "സ്നേഹപൂർവ്വം പദ്ധതി",
+    "category": "Education",
+    "min_age": 6,
+    "max_age": 18,
+    "income_limit": 200000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Orphan children studying in classes 1-12",
+    "benefit": "₹300-1,000 per month educational stipend",
+    "documents": [
+      "Death Certificate of Parent",
+      "School Certificate",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply through school",
+      "Submit parent's death certificate",
+      "Verification by ICDS",
+      "Monthly stipend to guardian's bank"
+    ],
+    "link": "https://sjd.kerala.gov.in/snehapoorvam",
+    "description_en": "Educational support for orphan children",
+    "description_local": "അനാഥ കുട്ടികൾക്കായുള്ള വിദ്യാഭ്യാസ പിന്തുണ"
+  },
+  {
+    "id": "kl-004",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Karunya Health Scheme",
+    "name_local": "കാരുണ്യ ആരോഗ്യ പദ്ധതി",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 300000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Student",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "BPL families in Kerala",
+    "benefit": "Free treatment up to ₹5 lakh per family per year",
+    "documents": [
+      "Aadhaar Card",
+      "BPL Certificate",
+      "Ration Card"
+    ],
+    "steps": [
+      "Visit network hospital",
+      "Show Karunya card",
+      "Avail cashless treatment"
+    ],
+    "link": "https://karunya.kerala.gov.in",
+    "description_en": "Comprehensive health insurance for BPL families",
+    "description_local": "BPL കുടുംബങ്ങൾക്കായുള്ള സമഗ്ര ആരോഗ്യ ഇൻഷുറൻസ്"
+  },
+  {
+    "id": "kl-005",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Kerala Social Security Pension",
+    "name_local": "കേരള സാമൂഹ്യ സുരക്ഷ പെൻഷൻ",
+    "category": "Social Security",
+    "min_age": 60,
+    "max_age": 100,
+    "income_limit": 200000,
+    "occupations": [
+      "Senior Citizen",
+      "Homemaker",
+      "Unemployed"
+    ],
+    "eligibility": "Senior citizens above 60, widows, disabled persons",
+    "benefit": "₹1,600 per month pension",
+    "documents": [
+      "Aadhaar Card",
+      "Age Proof",
+      "Income Certificate",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply at local panchayat/municipality",
+      "Submit age & income proof",
+      "Verification",
+      "Monthly pension to bank"
+    ],
+    "link": "https://welfarepension.lsgkerala.gov.in",
+    "description_en": "Monthly pension for senior citizens and vulnerable sections",
+    "description_local": "മുതിർന്ന പൗരന്മാർക്കും ദുർബല വിഭാഗങ്ങൾക്കും മാസ പെൻഷൻ"
+  },
+  {
+    "id": "kl-006",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Kudumbashree Mission",
+    "name_local": "കുടുംബശ്രീ മിഷൻ",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 300000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Women from BPL families in Kerala",
+    "benefit": "Micro-credit, skill training, and enterprise support",
+    "documents": [
+      "Aadhaar Card",
+      "BPL Certificate",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Join nearest Kudumbashree NHG",
+      "Attend weekly meetings",
+      "Access micro-loans & training"
+    ],
+    "link": "https://kudumbashree.org",
+    "description_en": "Women empowerment and poverty reduction through community development",
+    "description_local": "സാമുദായിക വികസനത്തിലൂടെ സ്ത്രീ ശാക്തീകരണവും ദാരിദ്ര്യ നിർമ്മാർജ്ജനവും"
+  },
+  {
+    "id": "nat-001",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Kisan Samman Nidhi",
+    "name_local": "पीएम किसान सम्मान निधि",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 75,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "All farmer families with cultivable land",
+    "benefit": "₹6,000 per year in three installments",
+    "documents": [
+      "Aadhaar Card",
+      "Land Records",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register on pmkisan.gov.in",
+      "Submit land & Aadhaar details",
+      "Verification by state officials",
+      "₹2,000 every 4 months to bank"
+    ],
+    "link": "https://pmkisan.gov.in",
+    "description_en": "Direct income support of ₹6,000 per year to farmer families",
+    "description_local": "किसान परिवारों को प्रति वर्ष ₹6,000 की प्रत्यक्ष आय सहायता"
+  },
+  {
+    "id": "nat-002",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Ayushman Bharat - PM-JAY",
+    "name_local": "आयुष्मान भारत - पीएम-जय",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 500000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Student",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "Bottom 40% of population as per SECC data",
+    "benefit": "Free health coverage up to ₹5 lakh per family per year",
+    "documents": [
+      "Aadhaar Card",
+      "Ration Card",
+      "SECC Listed"
+    ],
+    "steps": [
+      "Check eligibility on mera.pmjay.gov.in",
+      "Visit empaneled hospital",
+      "Show Aadhaar for verification",
+      "Avail cashless treatment"
+    ],
+    "link": "https://pmjay.gov.in",
+    "description_en": "World's largest health insurance scheme covering 50 crore beneficiaries",
+    "description_local": "50 करोड़ लाभार्थियों को कवर करने वाली दुनिया की सबसे बड़ी स्वास्थ्य बीमा योजना"
+  },
+  {
+    "id": "nat-003",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Awas Yojana",
+    "name_local": "पीएम आवास योजना",
+    "category": "Housing",
+    "min_age": 21,
+    "max_age": 65,
+    "income_limit": 600000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Unemployed"
+    ],
+    "eligibility": "EWS/LIG families without a pucca house",
+    "benefit": "Subsidy of ₹1.5-2.67 lakh for house construction/purchase",
+    "documents": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Land Document"
+    ],
+    "steps": [
+      "Apply on pmaymis.gov.in",
+      "Submit income & land proof",
+      "Selection by urban body",
+      "Subsidy linked to home loan"
+    ],
+    "link": "https://pmaymis.gov.in",
+    "description_en": "Housing for all by providing affordable homes",
+    "description_local": "सभी के लिए किफायती आवास उपलब्ध कराना"
+  },
+  {
+    "id": "nat-004",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Ujjwala Yojana",
+    "name_local": "पीएम उज्ज्वला योजना",
+    "category": "Energy",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 200000,
+    "occupations": [
+      "Homemaker",
+      "Worker"
+    ],
+    "eligibility": "Women from BPL households",
+    "benefit": "Free LPG connection with one-time subsidy of ₹1,600",
+    "documents": [
+      "BPL Card",
+      "Aadhaar Card",
+      "Jan Dhan Account"
+    ],
+    "steps": [
+      "Visit nearest LPG distributor",
+      "Submit BPL card & Aadhaar",
+      "Get free connection",
+      "First refill subsidy credited"
+    ],
+    "link": "https://www.pmuy.gov.in",
+    "description_en": "Free LPG connections for women from poor households",
+    "description_local": "गरीब परिवारों की महिलाओं को मुफ्त एलपीजी कनेक्शन"
+  },
+  {
+    "id": "nat-005",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Sukanya Samriddhi Yojana",
+    "name_local": "सुकन्या समृद्धि योजना",
+    "category": "Savings",
+    "min_age": 0,
+    "max_age": 10,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student",
+      "Homemaker",
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Girl child below 10 years of age",
+    "benefit": "8% interest rate savings account, tax benefits under 80C",
+    "documents": [
+      "Birth Certificate",
+      "Parent's Aadhaar",
+      "Address Proof"
+    ],
+    "steps": [
+      "Visit post office or bank",
+      "Open SSY account in girl's name",
+      "Deposit min ₹250/year",
+      "Matures at age 21"
+    ],
+    "link": "https://www.nsiindia.gov.in",
+    "description_en": "Small savings scheme for girl child with high interest",
+    "description_local": "बालिका के लिए उच्च ब्याज दर वाली लघु बचत योजना"
+  },
+  {
+    "id": "nat-006",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Mudra Loan Yojana",
+    "name_local": "मुद्रा लोन योजना",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 1000000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Small business owners, entrepreneurs, self-employed individuals",
+    "benefit": "Collateral-free loans up to ₹10 lakh",
+    "documents": [
+      "Aadhaar Card",
+      "Business Plan",
+      "ID Proof",
+      "Address Proof"
+    ],
+    "steps": [
+      "Approach any bank/NBFC",
+      "Submit business plan",
+      "Get loan under Shishu/Kishore/Tarun category"
+    ],
+    "link": "https://www.mudra.org.in",
+    "description_en": "Micro-enterprise development through easy loans",
+    "description_local": "आसान ऋणों के माध्यम से सूक्ष्म उद्यम विकास"
+  },
+  {
+    "id": "nat-007",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Atal Pension Yojana",
+    "name_local": "अटल पेंशन योजना",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 40,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Indian citizens aged 18-40 with bank account",
+    "benefit": "Guaranteed pension of ₹1,000-5,000 per month after 60",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Mobile Number"
+    ],
+    "steps": [
+      "Visit bank branch",
+      "Fill APY form",
+      "Choose pension amount",
+      "Auto-debit from savings account"
+    ],
+    "link": "https://npscra.nsdl.co.in/scheme-details.php",
+    "description_en": "Pension scheme for unorganized sector workers",
+    "description_local": "असंगठित क्षेत्र के कामगारों के लिए पेंशन योजना"
+  },
+  {
+    "id": "nat-008",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Matru Vandana Yojana",
+    "name_local": "पीएम मातृ वंदना योजना",
+    "category": "Women & Child",
+    "min_age": 18,
+    "max_age": 45,
+    "income_limit": 1000000,
+    "occupations": [
+      "Homemaker",
+      "Worker"
+    ],
+    "eligibility": "Pregnant and lactating women for first live birth",
+    "benefit": "₹5,000 in three installments for first pregnancy",
+    "documents": [
+      "Aadhaar Card",
+      "MCP Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register at Anganwadi center",
+      "Submit MCP card & Aadhaar",
+      "Receive ₹5,000 in 3 installments"
+    ],
+    "link": "https://pmmvy.wcd.gov.in",
+    "description_en": "Maternity benefit for pregnant women and nursing mothers",
+    "description_local": "गर्भवती महिलाओं और नर्सिंग माताओं के लिए मातृत्व लाभ"
+  },
+  {
+    "id": "nat-009",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Stand Up India Scheme",
+    "name_local": "स्टैंड अप इंडिया योजना",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 1000000,
+    "occupations": [
+      "Self-Employed",
+      "Worker",
+      "Unemployed"
+    ],
+    "eligibility": "SC/ST and women entrepreneurs",
+    "benefit": "Bank loans between ₹10 lakh to ₹1 crore for greenfield enterprises",
+    "documents": [
+      "Aadhaar Card",
+      "Caste Certificate",
+      "Business Plan",
+      "Project Report"
+    ],
+    "steps": [
+      "Apply on standupmitra.in",
+      "Submit business plan & identity",
+      "Bank evaluation",
+      "Loan disbursement"
+    ],
+    "link": "https://www.standupmitra.in",
+    "description_en": "Promoting entrepreneurship among SC/ST and women",
+    "description_local": "अनुसूचित जाति/जनजाति और महिलाओं में उद्यमिता को बढ़ावा"
+  },
+  {
+    "id": "nat-010",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Vishwakarma Yojana",
+    "name_local": "पीएम विश्वकर्मा योजना",
+    "category": "Skill Development",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 500000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Traditional artisans and craftsmen",
+    "benefit": "Skill training, toolkit, credit support up to ₹3 lakh",
+    "documents": [
+      "Aadhaar Card",
+      "Artisan Certificate",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register on pmvishwakarma.gov.in",
+      "Verify trade/craft",
+      "Get training & toolkit",
+      "Apply for credit support"
+    ],
+    "link": "https://pmvishwakarma.gov.in",
+    "description_en": "End-to-end support for traditional artisans through training and credit",
+    "description_local": "प्रशिक्षण और ऋण के माध्यम से पारंपरिक कारीगरों को व्यापक सहायता"
+  },
+  {
+    "id": "nat-011",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Pradhan Mantri Fasal Bima Yojana",
+    "name_local": "प्रधानमंत्री फसल बीमा योजना",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 75,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "All farmers growing notified crops in notified areas",
+    "benefit": "Crop insurance coverage with minimal premium (1.5-5%)",
+    "documents": [
+      "Land Records",
+      "Sowing Certificate",
+      "Bank Account",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply at bank or CSC center",
+      "Submit crop & land details",
+      "Pay premium (1.5-5%)",
+      "Claim in case of crop loss"
+    ],
+    "link": "https://pmfby.gov.in",
+    "description_en": "Comprehensive crop insurance against natural calamities and pests",
+    "description_local": "प्राकृतिक आपदाओं और कीटों के खिलाफ व्यापक फसल बीमा"
+  },
+  {
+    "id": "nat-012",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM SVANidhi (Street Vendor Scheme)",
+    "name_local": "पीएम स्वनिधि",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 300000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Street vendors with certificate of vending",
+    "benefit": "Working capital loan up to ₹50,000 with 7% interest subsidy",
+    "documents": [
+      "Vending Certificate",
+      "Aadhaar Card",
+      "Bank Account"
+    ],
+    "steps": [
+      "Apply on pmsvanidhi.mohua.gov.in",
+      "Submit vending certificate",
+      "Get ₹10K-50K loan",
+      "Repay & get higher loans"
+    ],
+    "link": "https://pmsvanidhi.mohua.gov.in",
+    "description_en": "Micro-credit facility for street vendors",
+    "description_local": "स्ट्रीट वेंडर्स के लिए सूक्ष्म ऋण सुविधा"
+  },
+  {
+    "id": "nat-013",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "Samagra Shiksha Abhiyan",
+    "name_local": "समग्र शिक्षा अभियान",
+    "category": "Education",
+    "min_age": 6,
+    "max_age": 18,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "All children aged 6-18 in government schools",
+    "benefit": "Free textbooks, uniforms, mid-day meals, and special education support",
+    "documents": [
+      "School Enrollment",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Enroll in government school",
+      "Benefits provided automatically"
+    ],
+    "link": "https://samagra.education.gov.in",
+    "description_en": "Integrated scheme for school education from pre-school to class 12",
+    "description_local": "प्री-स्कूल से कक्षा 12 तक की स्कूली शिक्षा के लिए एकीकृत योजना"
+  },
+  {
+    "id": "nat-014",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Jeevan Jyoti Bima Yojana",
+    "name_local": "पीएम जीवन ज्योति बीमा योजना",
+    "category": "Insurance",
+    "min_age": 18,
+    "max_age": 50,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "Bank account holders aged 18-50 years",
+    "benefit": "Life insurance of ₹2 lakh at premium of ₹436/year",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Visit bank branch",
+      "Fill PMJJBY form",
+      "Annual premium auto-debited",
+      "Nominee gets ₹2L on death"
+    ],
+    "link": "https://financialservices.gov.in",
+    "description_en": "Low-cost life insurance for common citizens",
+    "description_local": "आम नागरिकों के लिए कम कीमत वाला जीवन बीमा"
+  },
+  {
+    "id": "nat-015",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "National Apprenticeship Promotion Scheme",
+    "name_local": "राष्ट्रीय शिक्षुता संवर्धन योजना",
+    "category": "Skill Development",
+    "min_age": 14,
+    "max_age": 30,
+    "income_limit": 500000,
+    "occupations": [
+      "Student",
+      "Unemployed"
+    ],
+    "eligibility": "Youth aged 14+ with minimum 5th pass qualification",
+    "benefit": "Monthly stipend ₹5,000-9,000 during apprenticeship",
+    "documents": [
+      "Aadhaar Card",
+      "Education Certificate",
+      "Age Proof"
+    ],
+    "steps": [
+      "Register on apprenticeshipindia.gov.in",
+      "Apply to establishments",
+      "Complete apprenticeship training",
+      "Get certified"
+    ],
+    "link": "https://www.apprenticeshipindia.gov.in",
+    "description_en": "Promoting apprenticeship training in industries",
+    "description_local": "उद्योगों में शिक्षुता प्रशिक्षण को बढ़ावा"
+  },
+  {
+    "id": "nat-016",
+    "state": "National",
+    "state_name": "All India",
+    "name_en": "PM Jan Dhan Yojana",
+    "name_local": "पीएम जन धन योजना",
+    "category": "Financial Inclusion",
+    "min_age": 10,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Homemaker",
+      "Student",
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "Any Indian citizen without a bank account",
+    "benefit": "Zero-balance bank account with ₹1 lakh accident insurance",
+    "documents": [
+      "Aadhaar Card",
+      "Address Proof"
+    ],
+    "steps": [
+      "Visit nearest bank branch",
+      "Fill account opening form",
+      "Submit Aadhaar",
+      "Get RuPay debit card"
+    ],
+    "link": "https://pmjdy.gov.in",
+    "description_en": "Financial inclusion through universal banking access",
+    "description_local": "सार्वभौमिक बैंकिंग पहुंच के माध्यम से वित्तीय समावेशन"
+  },
+  {
+    "id": "tn-010",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Chief Minister's Breakfast Scheme",
+    "name_local": "முதலமைச்சரின் காலை உணவுத் திட்டம்",
+    "category": "Education",
+    "min_age": 5,
+    "max_age": 10,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student",
+      "All"
+    ],
+    "eligibility": "Students of Class 1 to 5 in government schools",
+    "benefit": "Free nutritious breakfast on all working school days",
+    "documents": [
+      "School ID Card",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Enroll in government primary school",
+      "Breakfast is served automatically"
+    ],
+    "link": "https://tn.gov.in/breakfast",
+    "description_en": "Nutritious breakfast for primary school children to improve health and attendance",
+    "description_local": "தொடக்கப் பள்ளி குழந்தைகளுக்கு சத்தான காலை உணவு"
+  },
+  {
+    "id": "tn-011",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Makkalai Thedi Maruthuvam",
+    "name_local": "மக்களை தேடி மருத்துவம்",
+    "category": "Health",
+    "min_age": 45,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "Senior Citizen",
+      "Homemaker",
+      "All"
+    ],
+    "eligibility": "Patients above 45 years with non-communicable diseases",
+    "benefit": "Doorstep delivery of medicines and healthcare services",
+    "documents": [
+      "Aadhaar Card",
+      "Medical Records"
+    ],
+    "steps": [
+      "Register at local PHC",
+      "Health worker visits home",
+      "Receive free medicines directly"
+    ],
+    "link": "https://mtm.ihmctn.com/",
+    "description_en": "Home delivery of medicines for chronic diseases like diabetes and hypertension",
+    "description_local": "நீரிழிவு போன்ற நோய்களுக்கான மருந்துகளை வீடுகளுக்கே சென்று வழங்குதல்"
+  },
+  {
+    "id": "tn-012",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Innuyir Kappom - Nammai Kaakkum 48",
+    "name_local": "இன்னுயிர் காப்போம் - நம்மை காக்கும் 48",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Road accident victims within Tamil Nadu borders",
+    "benefit": "Free emergency medical treatment up to ₹1,00,000 for the first 48 hours",
+    "documents": [
+      "None required during emergency"
+    ],
+    "steps": [
+      "Admit accident victim to empaneled hospital",
+      "Treatment begins immediately without upfront cost"
+    ],
+    "link": "https://tnhealth.tn.gov.in",
+    "description_en": "Free emergency medical treatment for road accident victims in the golden hour",
+    "description_local": "சாலை விபத்தில் பாதிக்கப்பட்டவர்களுக்கு முதல் 48 மணிநேர இலவச சிகிச்சை"
+  },
+  {
+    "id": "tn-013",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Naan Mudhalvan Scheme",
+    "name_local": "நான் முதல்வன் திட்டம்",
+    "category": "Skill Development",
+    "min_age": 16,
+    "max_age": 25,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student",
+      "Unemployed"
+    ],
+    "eligibility": "School and college students in Tamil Nadu",
+    "benefit": "Free industry-relevant skill training and career guidance",
+    "documents": [
+      "Student ID",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Register on Naan Mudhalvan portal",
+      "Take psychometric test",
+      "Enroll in specialized courses",
+      "Attend corporate training"
+    ],
+    "link": "https://www.naanmudhalvan.tn.gov.in/",
+    "description_en": "Skill enhancement and career guidance initiative for youth",
+    "description_local": "இளைஞர்களுக்கான திறன் மேம்பாடு மற்றும் தொழில் வழிகாட்டுதல்"
+  },
+  {
+    "id": "tn-014",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Dr. Muthulakshmi Reddy Maternity Benefit",
+    "name_local": "டாக்டர் முத்துலட்சுமி ரெட்டி மகப்பேறு நிதி உதவி",
+    "category": "Women Empowerment",
+    "min_age": 19,
+    "max_age": 45,
+    "income_limit": 200000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "All"
+    ],
+    "eligibility": "Pregnant women aged 19 and above below poverty line (for first 2 deliveries)",
+    "benefit": "₹18,000 financial assistance and nutrition kits",
+    "documents": [
+      "PICME Registration Number",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register pregnancy on PICME",
+      "Visit Village Health Nurse",
+      "Receive installments in bank account"
+    ],
+    "link": "https://picme.tn.gov.in",
+    "description_en": "Financial assistance for pregnant women to ensure proper nutrition",
+    "description_local": "கர்ப்பிணிப் பெண்களுக்கு ஊட்டச்சத்தை உறுதி செய்வதற்கான ஆர்த்திக உதவி"
+  },
+  {
+    "id": "tn-015",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Thamizhagam Rural Housing Scheme",
+    "name_local": "தமிழக ஊரக வீட்டு வசதி திட்டம்",
+    "category": "Housing",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 250000,
+    "occupations": [
+      "Worker",
+      "All"
+    ],
+    "eligibility": "Homeless poor families in rural block panchayats",
+    "benefit": "₹2,10,000 total subsidy for pucca house construction",
+    "documents": [
+      "Land Patta",
+      "Aadhaar Card",
+      "Ration Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Apply via Gram Panchayat",
+      "Submit land documents",
+      "Approval by BDO",
+      "Construction linked installments"
+    ],
+    "link": "https://tnrd.tn.gov.in",
+    "description_en": "Scheme providing financial aid to build concrete houses in rural areas",
+    "description_local": "ஊரக பகுதிகளில் கான்கிரீட் வீடுகள் கட்ட நிதி உதவி"
+  },
+  {
+    "id": "ap-008",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Vahana Mitra",
+    "name_local": "వైఎస్ఆర్ వాహన మిత్ర",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 300000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Auto/Taxi/Cab drivers who own their vehicles",
+    "benefit": "₹10,000 per year for vehicle maintenance and insurance",
+    "documents": [
+      "Vehicle RC",
+      "Driving License",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply on Navasakam portal",
+      "Submit DL and RC proof",
+      "Verification by transport department",
+      "Annual direct transfer"
+    ],
+    "link": "https://navasakam.ap.gov.in/vahanamitra",
+    "description_en": "Financial assistance for auto and taxi drivers",
+    "description_local": "ఆటో, టాక్సీ డ్రైవర్లకు ఆర్థిక సహాయం"
+  },
+  {
+    "id": "ap-009",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Matsyakara Bharosa",
+    "name_local": "వైఎస్ఆర్ మత్స్యకార భరోసా",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 500000,
+    "occupations": [
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Active traditional and mechanized boat fishermen",
+    "benefit": "₹10,000 per year during the marine fishing ban period",
+    "documents": [
+      "Fisherman ID",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Register with Fisheries Department",
+      "Submit boat/license details",
+      "Direct credit during ban period"
+    ],
+    "link": "https://ap.gov.in/matsyakara",
+    "description_en": "Financial relief for fishermen during non-fishing ban season",
+    "description_local": "వేట నిషేధ సమయంలో మత్స్యకారులకు ఆర్థిక సహాయం"
+  },
+  {
+    "id": "ap-010",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Nethanna Nestham",
+    "name_local": "వైఎస్ఆర్ నేతన్న నేస్తం",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 300000,
+    "occupations": [
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Handloom weaver families owning at least one handloom",
+    "benefit": "₹24,000 per year for upgrading equipment",
+    "documents": [
+      "Weaver ID",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply at Ward Secretariat",
+      "Verification of handloom ownership",
+      "Direct transfer to bank account"
+    ],
+    "link": "https://ap.gov.in/nethanna",
+    "description_en": "Financial assistance to handloom weavers for modernization",
+    "description_local": "చేనేత కార్మికులకు ఆర్థిక సహాయం"
+  },
+  {
+    "id": "ap-011",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Vasathi Deevena",
+    "name_local": "జగనన్న వసతి దీవెన",
+    "category": "Education",
+    "min_age": 16,
+    "max_age": 25,
+    "income_limit": 250000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students pursuing ITI, Polytechnic, or Degree courses",
+    "benefit": "₹10,000 to ₹20,000 per year for hostel and mess charges",
+    "documents": [
+      "College ID",
+      "Aadhaar Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Apply via college administration",
+      "Submit income and caste certs",
+      "Amount credited to mother's account"
+    ],
+    "link": "https://navasakam.ap.gov.in",
+    "description_en": "Hostel and mess charge assistance for degree and diploma students",
+    "description_local": "విద్యార్థులకు హాస్టల్ మరియు మెస్ ఛార్జీల సహాయం"
+  },
+  {
+    "id": "ap-012",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Bima",
+    "name_local": "వైఎస్ఆర్ బీమా",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 250000,
+    "occupations": [
+      "Worker",
+      "Farmer",
+      "Unemployed",
+      "All"
+    ],
+    "eligibility": "Primary breadwinner of BPL families",
+    "benefit": "₹5,000,000 accident insurance and ₹1,00,000 natural death relief",
+    "documents": [
+      "White Ration Card",
+      "Aadhaar Card",
+      "Nominee Details"
+    ],
+    "steps": [
+      "Register via village volunteer",
+      "Link bank account",
+      "Claim triggered on casualty"
+    ],
+    "link": "https://ysrbima.ap.gov.in",
+    "description_en": "Comprehensive insurance coverage for primary breadwinners of BPL families",
+    "description_local": "బిపిఎల్ కుటుంబాల ప్రధాన సంపాదకులకు సమగ్ర బీమా"
+  },
+  {
+    "id": "ap-013",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Thodu",
+    "name_local": "జగనన్న తోడు",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 500000,
+    "occupations": [
+      "Worker",
+      "Self-Employed"
+    ],
+    "eligibility": "Small street vendors and artisans",
+    "benefit": "Interest-free loan of ₹10,000 per year",
+    "documents": [
+      "Vending Certificate",
+      "Aadhaar Card",
+      "Bank Account"
+    ],
+    "steps": [
+      "Apply at Ward Secretariat",
+      "Verification",
+      "Loan disbursement directly to bank"
+    ],
+    "link": "https://ap.gov.in",
+    "description_en": "Interest free loan for small street vendors to boost their business",
+    "description_local": "చిరు వ్యాపారులకు వడ్డీ లేని రుణం"
+  },
+  {
+    "id": "ka-008",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Mathrushree Scheme",
+    "name_local": "ಮಾತೃಶ್ರೀ ಯೋಜನೆ",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 45,
+    "income_limit": 200000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "All"
+    ],
+    "eligibility": "Pregnant BPL women (for first 2 deliveries)",
+    "benefit": "₹6,000 financial aid distributed pre and post delivery",
+    "documents": [
+      "Thayi Card",
+      "Aadhaar Card",
+      "BPL Ration Card"
+    ],
+    "steps": [
+      "Register pregnancy at Anganwadi",
+      "Submit Thayi card",
+      "Aid transferred in installments"
+    ],
+    "link": "https://dwcd.karnataka.gov.in",
+    "description_en": "Maternity benefit for pregnant women in BPL families",
+    "description_local": "ಬಿಪಿಎಲ್ ಕುಟುಂಬಗಳ ಗರ್ಭಿಣಿಯರಿಗೆ ಹೆರಿಗೆ ಭತ್ಯೆ"
+  },
+  {
+    "id": "ka-009",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Vidyasiri Scheme",
+    "name_local": "ವಿದ್ಯಾಸಿರಿ ಯೋಜನೆ",
+    "category": "Education",
+    "min_age": 15,
+    "max_age": 25,
+    "income_limit": 250000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "OBC/SC/ST students pursuing post-matric courses without hostel access",
+    "benefit": "₹1,500 per month for accommodation and food for 10 months",
+    "documents": [
+      "College Admission Proof",
+      "Caste Certificate",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Apply on State Scholarship Portal",
+      "Institute verification",
+      "Monthly stipend credited"
+    ],
+    "link": "https://ssp.postmatric.karnataka.gov.in",
+    "description_en": "Food and accommodation stipend for backward class students",
+    "description_local": "ಹಿಂದುಳಿದ ವರ್ಗಗಳ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಊಟ ಮತ್ತು ವಸತಿ ಭತ್ಯೆ"
+  },
+  {
+    "id": "ka-010",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Sandhya Suraksha Yojana",
+    "name_local": "ಸಂಧ್ಯಾ ಸುರಕ್ಷಾ ಯೋಜನೆ",
+    "category": "Social Security",
+    "min_age": 65,
+    "max_age": 100,
+    "income_limit": 20000,
+    "occupations": [
+      "Senior Citizen",
+      "Unemployed"
+    ],
+    "eligibility": "Senior citizens above 65 with income below ₹20,000",
+    "benefit": "₹1,200 monthly pension",
+    "documents": [
+      "Age Proof",
+      "Income Certificate",
+      "Aadhaar Card",
+      "Bank Passbook"
+    ],
+    "steps": [
+      "Apply at Nada Kacheri",
+      "Submit age and tax income proof",
+      "Approval by Tahsildar"
+    ],
+    "link": "https://nadakacheri.karnataka.gov.in",
+    "description_en": "Monthly pension scheme for vulnerable senior citizens",
+    "description_local": "ದುರ್ಬಲ ಹಿರಿಯ ನಾಗರಿಕರಿಗೆ ಮಾಸಿಕ ಪಿಂಚಣಿ ಯೋಜನೆ"
+  },
+  {
+    "id": "ka-011",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Karnataka Arogya Sanjeevini Scheme",
+    "name_local": "ಕರ್ನಾಟಕ ಆರೋಗ್ಯ ಸಂಜೀವಿನಿ",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 0,
+    "occupations": [
+      "Worker",
+      "Government Employee"
+    ],
+    "eligibility": "State Government Employees and their dependents",
+    "benefit": "Cashless medical treatment in empaneled private hospitals",
+    "documents": [
+      "Employee ID",
+      "Dependents Aadhaar Card"
+    ],
+    "steps": [
+      "Enroll via HRMS portal",
+      "Link family members",
+      "Show e-card at hospital"
+    ],
+    "link": "https://arogyasanjeevini.karnataka.gov.in",
+    "description_en": "Cashless health insurance for Karnataka state government employees",
+    "description_local": "ಸರ್ಕಾರಿ ನೌಕರರಿಗೆ ನಗದು ರಹಿತ ಆರೋಗ್ಯ ವಿಮೆ"
+  },
+  {
+    "id": "ka-012",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Chief Minister's Self Employment Scheme",
+    "name_local": "ಮುಖ್ಯಮಂತ್ರಿ ಸ್ವಯಂ ಉದ್ಯೋಗ ಯೋಜನೆ",
+    "category": "Employment",
+    "min_age": 21,
+    "max_age": 45,
+    "income_limit": 1000000,
+    "occupations": [
+      "Unemployed",
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Unemployed youth launching manufacturing/service businesses",
+    "benefit": "25-35% margin money subsidy on bank loans up to ₹10 Lakhs",
+    "documents": [
+      "Aadhaar Card",
+      "Project Report",
+      "EDP Training Certificate"
+    ],
+    "steps": [
+      "Apply on CMESA portal",
+      "Submit project report",
+      "Bank Loan Sanction",
+      "Subsidy released"
+    ],
+    "link": "https://cmegp.kar.nic.in",
+    "description_en": "Subsidy support to start a new business or MSME",
+    "description_local": "ಹೊಸ ವ್ಯಾಪಾರ ಪ್ರಾರಂಭಿಸಲು ಸಬ್ಸಿಡಿ ಬೆಂಬಲ"
+  },
+  {
+    "id": "ka-013",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Mukhyamantri Raita Vidya Nidhi",
+    "name_local": "ಮುಖ್ಯಮಂತ್ರಿ ರೈತ ವಿದ್ಯಾ ನಿಧಿ",
+    "category": "Education",
+    "min_age": 14,
+    "max_age": 25,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students who are children of farmers, studying 11th std to post-graduation",
+    "benefit": "₹2,000 to ₹11,000 annual scholarship",
+    "documents": [
+      "Farmer ID (FID) of Parent",
+      "College Admission Proof",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply on e-Governance SSP portal",
+      "Link parent's FID",
+      "Direct transfer to student account"
+    ],
+    "link": "https://ssp.postmatric.karnataka.gov.in",
+    "description_en": "Scholarship for farmer's children pursuing higher education",
+    "description_local": "ರೈತರ ಮಕ್ಕಳ ಉನ್ನತ ಶಿಕ್ಷಣಕ್ಕೆ ವಿದ್ಯಾರ್ಥಿವೇತನ"
+  },
+  {
+    "id": "kl-007",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Vidyakiranam Scheme",
+    "name_local": "വിദ്യാകിരണം",
+    "category": "Education",
+    "min_age": 6,
+    "max_age": 24,
+    "income_limit": 250000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Children of differently-abled parents",
+    "benefit": "Educational assistance from ₹300 per month (school) to ₹1,000 per month (college)",
+    "documents": [
+      "Parent's Disability Certificate",
+      "Income Certificate",
+      "School/College enrollment"
+    ],
+    "steps": [
+      "Apply via Social Justice portal",
+      "Submit disability and income proofs",
+      "Verification by CDPO"
+    ],
+    "link": "https://sjd.kerala.gov.in",
+    "description_en": "Educational assistance to children of parents with severe disabilities",
+    "description_local": "ഭിന്നശേഷിക്കാരായ മാതാപിതാക്കളുടെ മക്കൾക്ക് വിദ്യാഭ്യാസ സഹായം"
+  },
+  {
+    "id": "kl-008",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Aswasakiranam Scheme",
+    "name_local": "ആശ്വാസകിരണം",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 80,
+    "income_limit": 100000,
+    "occupations": [
+      "Homemaker",
+      "Unemployed",
+      "All"
+    ],
+    "eligibility": "Caregivers of bedridden, severely disabled, or mentally challenged persons",
+    "benefit": "₹600 monthly financial assistance to the caregiver",
+    "documents": [
+      "Medical Certificate of Patient",
+      "Aadhaar Card of Caregiver",
+      "BPL Certificate"
+    ],
+    "steps": [
+      "Apply via Local ICDS office",
+      "Submit medical proofs",
+      "Direct credit to caregiver's bank"
+    ],
+    "link": "https://sjd.kerala.gov.in",
+    "description_en": "Financial aid for caregivers of severely disabled patients",
+    "description_local": "കിടപ്പിലായ രോഗികളെ പരിചരിക്കുന്നവർക്കുള്ള ധനസഹായം"
+  },
+  {
+    "id": "kl-009",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Karunya Benevolent Fund",
+    "name_local": "കാരുണ്യ ബെനവലൻ്റ് ഫണ്ട്",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 300000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "BPL and APL families facing catastrophic illnesses (Cancer, Kidney, Heart, Brain)",
+    "benefit": "Medical grant up to ₹2,00,000 for critical illness treatment",
+    "documents": [
+      "Doctor's Estimate",
+      "Ration Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Submit application at designated hospital",
+      "Approval by Karunya society",
+      "Amount paid directly to hospital"
+    ],
+    "link": "https://karunya.kerala.gov.in",
+    "description_en": "Financial assistance for critical illnesses (Cancer, Cardiac, Kidney)",
+    "description_local": "മാരക രോഗങ്ങൾക്കുള്ള സാമ്പത്തിക ചികിത്സാ സഹായം"
+  },
+  {
+    "id": "kl-010",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Ayyankali Urban Employment Guarantee Scheme",
+    "name_local": "അയ്യങ്കാളി നഗര തൊഴിലുറപ്പ് പദ്ധതി",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 1000000,
+    "occupations": [
+      "Worker",
+      "Unemployed"
+    ],
+    "eligibility": "Adults residing in urban local bodies willing to do unskilled manual work",
+    "benefit": "100 days of guaranteed wage employment per household per year",
+    "documents": [
+      "Aadhaar Card",
+      "Bank Account",
+      "Address Proof"
+    ],
+    "steps": [
+      "Register at Municipality/Corporation",
+      "Get job card",
+      "Apply for work",
+      "Wages credited to bank"
+    ],
+    "link": "https://kerala.gov.in",
+    "description_en": "Guaranteed 100 days of urban employment for unskilled labor",
+    "description_local": "നഗരപ്രദേശങ്ങളിലെ തൊഴിലുറപ്പ് പദ്ധതി"
+  },
+  {
+    "id": "kl-011",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Subhiksha Keralam",
+    "name_local": "സുഭിക്ഷ കേരളം",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 70,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Farmers and landowners participating in food security agriculture projects",
+    "benefit": "Subsidies for integrated farming, seeds, and fertilizer supplies",
+    "documents": [
+      "Land Deed",
+      "Aadhaar Card",
+      "Panchayat License"
+    ],
+    "steps": [
+      "Register on Subhiksha Keralam portal",
+      "Submit farm plan",
+      "Receive agricultural inputs subsidy"
+    ],
+    "link": "https://subhikshakeralam.kerala.gov.in/",
+    "description_en": "Food security scheme offering subsidies for integrated farming",
+    "description_local": "സംയോജിത കൃഷിക്കുള്ള സബ്സിഡികൾ നൽകുന്ന ഭക്ഷ്യ സുരക്ഷാ പദ്ധതി"
+  },
+  {
+    "id": "kl-012",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Saranya Scheme",
+    "name_local": "ശരണ്യ",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 55,
+    "income_limit": 100000,
+    "occupations": [
+      "Women",
+      "Unemployed",
+      "Homemaker"
+    ],
+    "eligibility": "Widows, divorced, or deserted women starting self-employment",
+    "benefit": "Loan up to ₹50,000 with 50% subsidy (up to ₹25,000)",
+    "documents": [
+      "Marital Status Certificate",
+      "Income Certificate",
+      "Project Report"
+    ],
+    "steps": [
+      "Apply at Employment Exchange",
+      "Submit project proposal",
+      "Verification",
+      "Subsidized loan disbursement"
+    ],
+    "link": "https://employment.kerala.gov.in",
+    "description_en": "Self-employment assistance for destitute women and widows",
+    "description_local": "വിധവകൾക്കും നിരാലംബരായ സ്ത്രീകൾക്കുമുള്ള സ്വയംതൊഴിൽ സഹായം"
+  },
+  {
+    "id": "tn-016",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Chief Minister's Girl Child Protection Scheme",
+    "name_local": "முதலமைச்சரின் பெண் குழந்தை பாதுகாப்புத் திட்டம்",
+    "category": "Women & Child",
+    "min_age": 0,
+    "max_age": 3,
+    "income_limit": 72000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Families with one or two girl children and no male child, parents must have undergone sterilization.",
+    "benefit": "Fixed deposit of ₹50,000 for one girl child or ₹25,000 each for two girl children, maturing at age 18.",
+    "documents": [
+      "Birth Certificate",
+      "Income Certificate",
+      "Sterilization Certificate",
+      "Family Planning Certificate"
+    ],
+    "steps": [
+      "Apply at e-Seva centre or District Social Welfare Office",
+      "Submit age and medical proofs",
+      "Approval and fixed deposit bond issuance"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/43979",
+    "description_en": "Promoting the welfare of girl children and preventing female infanticide.",
+    "description_local": "பெண் குழந்தைகளின் நலனை மேம்படுத்துதல் மற்றும் பெண் சிசுக்கொலையைத் தடுத்தல்."
+  },
+  {
+    "id": "tn-017",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Dr. Dharmambal Ammaiyar Memorial Widow Remarriage Assistance",
+    "name_local": "டாக்டர் தர்மாம்பாள் அம்மையார் நினைவு விதவை மறுமண நிதி உதவி",
+    "category": "Women Empowerment",
+    "min_age": 20,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Widows remarrying. No income ceiling. Minimum age criteria apply.",
+    "benefit": "₹15,000 to ₹50,000 financial assistance and a 8 gram gold coin for making Thirumangalyam.",
+    "documents": [
+      "Widow Certificate",
+      "Death Certificate of first husband",
+      "Age proof",
+      "Marriage Invitation/Registration"
+    ],
+    "steps": [
+      "Apply within 6 months of marriage",
+      "Submit certificates to District Social Welfare Office",
+      "Verification and fund release"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/43969",
+    "description_en": "Financial assistance to encourage widow remarriage and provide social security.",
+    "description_local": "விதவை மறுமணத்தை ஊக்குவிக்கவும் சமூக பாதுகாப்பை வழங்கவும் நிதி உதவி."
+  },
+  {
+    "id": "tn-018",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Moovalur Ramamirtham Ammaiyar Memorial Marriage Assistance Scheme",
+    "name_local": "மூவலூர் ராமாமிர்தம் அம்மையார் நினைவு திருமண உதவித் திட்டம்",
+    "category": "Women Empowerment",
+    "min_age": 18,
+    "max_age": 40,
+    "income_limit": 72000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Poor girls matching minimum educational qualifications (10th pass for general, 5th for ST).",
+    "benefit": "₹25,000 to ₹50,000 cheque and 8 gram gold coin for Thirumangalyam.",
+    "documents": [
+      "Income Certificate",
+      "Educational Certificate",
+      "Age Proof",
+      "Marriage Invitation"
+    ],
+    "steps": [
+      "Apply 40 days before marriage",
+      "Submit documentation at e-Seva",
+      "Cheque and gold coin provided before marriage"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/43965",
+    "description_en": "Marriage assistance to help poor parents and encourage female education.",
+    "description_local": "ஏழை பெற்றோருக்கு திருமண உதவி மற்றும் பெண் கல்வியை ஊக்குவித்தல்."
+  },
+  {
+    "id": "tn-019",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "EVR Maniammaiyar Memorial Orphan Girl Marriage Assistance",
+    "name_local": "ஈ.வெ.ரா. மணியம்மையார் நினைவு ஆதரவற்ற மகளிர் திருமண உதவித் திட்டம்",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 40,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Orphan girls who have lost both parents. No income limit.",
+    "benefit": "₹25,000 to ₹50,000 (degree holders) + 8g gold coin.",
+    "documents": [
+      "Death Certificates of both parents",
+      "Orphan Certificate",
+      "Age Proof",
+      "Educational Certificates"
+    ],
+    "steps": [
+      "Apply at e-Seva centre",
+      "Submit parent death certificates",
+      "Verification by SWD officials"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/43966",
+    "description_en": "Marriage assistance specially aimed at orphan girls.",
+    "description_local": "ஆதரவற்ற பெண்களுக்கான சிறப்பு திருமண உதவி."
+  },
+  {
+    "id": "tn-020",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Chief Minister's Solar Powered Green House Scheme (CMSPGHS)",
+    "name_local": "முதலமைச்சரின் சூரிய சக்தி பசுமை வீடுகள் திட்டம்",
+    "category": "Housing",
+    "min_age": 18,
+    "max_age": 100,
+    "income_limit": 100000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Poor people living in rural areas without a proper concrete house.",
+    "benefit": "Free concrete house measuring 300 sq.ft with solar-powered home lighting system.",
+    "documents": [
+      "Patta",
+      "Aadhaar Card",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Apply at Village Panchayat",
+      "Selection by Gram Sabha",
+      "Construction overseen by BDO"
+    ],
+    "link": "https://tnrd.tn.gov.in/schemes/st_cmspghs.html",
+    "description_en": "Providing free solar-powered concrete houses to the rural poor.",
+    "description_local": "கிராமப்புற ஏழைகளுக்கு இலவச சூரிய சக்தி கான்கிரீட் வீடுகளை வழங்குதல்."
+  },
+  {
+    "id": "tn-021",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Free Distribution of Milch Cows and Goats/Sheep",
+    "name_local": "இலவச கறவை பசுக்கள் மற்றும் வெள்ளாடுகள்/செம்மறியாடுகள் வழங்கும் திட்டம்",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 100000,
+    "occupations": [
+      "Farmer",
+      "Unemployed"
+    ],
+    "eligibility": "Poor landless agricultural laborers and marginalized families, prioritized for women.",
+    "benefit": "1 Milch Cow or 4 Goats/Sheep distributed free of cost.",
+    "documents": [
+      "Aadhaar",
+      "Income Certificate",
+      "Destitute/Widow Certificate (if applicable)"
+    ],
+    "steps": [
+      "Apply to Village Panchayat",
+      "Beneficiary selection via Gram Sabha",
+      "Distribution camp by Animal Husbandry dept"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/6093",
+    "description_en": "Boosting rural economy and daily income through livestock distribution.",
+    "description_local": "கிராமப்புற பொருளாதாரம் மற்றும் தினசரி வருமானத்தை கால்நடைகள் மூலம் மேம்படுத்துதல்."
+  },
+  {
+    "id": "tn-022",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Amma Master Health Check-up Scheme",
+    "name_local": "அம்மா முழு உடல் பரிசோதனை திட்டம்",
+    "category": "Health",
+    "min_age": 30,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "All citizens above 30 years wishing to undergo preventive health screening.",
+    "benefit": "Highly subsidized comprehensive health check-up packages starting from ₹1000.",
+    "documents": [
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Book appointment at Government General Hospital",
+      "Pay subsidized fee",
+      "Complete battery of tests"
+    ],
+    "link": "https://www.tnhealth.tn.gov.in",
+    "description_en": "Preventive diagnostic screening at deeply subsidized rates in government hospitals.",
+    "description_local": "அரசு மருத்துவமனைகளில் அதிக மானிய விலையில் முழு உடல் பரிசோதனை."
+  },
+  {
+    "id": "tn-023",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Anjugam Ammaiyar Memorial Inter-Caste Marriage Assistance",
+    "name_local": "அஞ்சுகம் அம்மையார் நினைவு கலப்புத் திருமண நிதி உதவி",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Couples where one spouse belongs to SC/ST. No income ceiling.",
+    "benefit": "₹25,000 to ₹50,000 and 8g gold coin to promote a casteless society.",
+    "documents": [
+      "Community Certificates",
+      "Marriage Registration",
+      "Aadhaar Card",
+      "Education Proofs"
+    ],
+    "steps": [
+      "Apply within 2 years of marriage",
+      "Submit to District Social Welfare",
+      "Amount deposited directly"
+    ],
+    "link": "https://www.tn.gov.in/scheme/data_view/43973",
+    "description_en": "Financial assistance to encourage inter-caste marriages and abolish caste discrimination.",
+    "description_local": "சாதி பாகுபாட்டை ஒழித்து கலப்பு திருமணங்களை ஊக்குவிக்க நிதி உதவி."
+  },
+  {
+    "id": "tn-024",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Illam Thedi Kalvi",
+    "name_local": "இல்லம் தேடிக் கல்வி",
+    "category": "Education",
+    "min_age": 6,
+    "max_age": 14,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "School students in Class 1 to 8 in government and aided schools.",
+    "benefit": "Free after-school remedial classes near their habitation by volunteers to bridge learning gaps.",
+    "documents": [
+      "School ID",
+      "No formal documents needed for attendance"
+    ],
+    "steps": [
+      "Locate nearest ITK center in the village",
+      "Send children daily from 5 PM to 7 PM"
+    ],
+    "link": "https://illamthedikalvi.tnschools.gov.in/",
+    "description_en": "After-school educational initiative to bridge learning gaps caused by the pandemic.",
+    "description_local": "கற்றல் இடைவெளிகளை போக்க பள்ளி முடிந்த பின் மாலை நேர சிறப்பு வகுப்புகள்."
+  },
+  {
+    "id": "tn-025",
+    "state": "TN",
+    "state_name": "Tamil Nadu",
+    "name_en": "Tamil Nadu Rural Livelihood Mission (TNSRLM)",
+    "name_local": "தமிழ்நாடு மாநில ஊரக வாழ்வாதார இயக்கம்",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 100000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Rural poor women forming Self Help Groups (SHGs).",
+    "benefit": "Capacity building, seed money, and linkage to bank credit up to ₹10-20 Lakhs for group enterprises.",
+    "documents": [
+      "Aadhaar",
+      "BPL Status/Income Proof",
+      "SHG Resolution"
+    ],
+    "steps": [
+      "Form a 12-20 member group",
+      "Register with Panchayat-level federation",
+      "Receive revolving fund and apply for bank linkage"
+    ],
+    "link": "https://www.mathi.tn.gov.in/",
+    "description_en": "Empowering women by helping them start micro-enterprises through SHGs.",
+    "description_local": "சுய உதவிக் குழுக்கள் மூலம் பெண்களுக்கு நுண் தொழில் தொடங்க உதவி."
+  },
+  {
+    "id": "ap-014",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Kalyanamastu",
+    "name_local": "వైఎస్ఆర్ కళ్యాణమస్తు",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 40,
+    "income_limit": 120000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "SC, ST, BC, Minorities, Disabled, and Construction Workers. Bride must be 18+, Groom 21+, both minimum 10th pass.",
+    "benefit": "Financial assistance ranging from ₹40,000 to ₹1,50,000 based on the caste combination.",
+    "documents": [
+      "10th Marks Memo",
+      "Caste Certificate",
+      "Income Certificate",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply at Village/Ward Secretariat within 60 days of marriage",
+      "Submit certificates",
+      "Approval by authorities"
+    ],
+    "link": "https://ysrkalyanamasthu.ap.gov.in/",
+    "description_en": "Financial assistance for marriages of poor marginalized families to promote education and prevent child marriage.",
+    "description_local": "బాల్య వివాహాలను నిరోధించడానికి మరియు పేద కుటుంబాలకు వివాహ ఆర్థిక సహాయం."
+  },
+  {
+    "id": "ap-015",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Kapu Nestham",
+    "name_local": "వైఎస్ఆర్ కాపు నేస్తం",
+    "category": "Women Empowerment",
+    "min_age": 45,
+    "max_age": 60,
+    "income_limit": 120000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "All"
+    ],
+    "eligibility": "Women belonging to Kapu, Balija, Telaga, and Ontari communities.",
+    "benefit": "₹15,000 per annum for five years to enhance their livelihood and living standards.",
+    "documents": [
+      "Caste Certificate",
+      "Aadhaar Card",
+      "Bank Passbook",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Verification by Village volunteers",
+      "Approval by Navasakam portal",
+      "Annual fund transfer"
+    ],
+    "link": "https://navasakam.ap.gov.in/",
+    "description_en": "Financial support to women from specific forward castes to improve business/livelihoods.",
+    "description_local": "కాపు, బలిజ, తెలగ, ఒంటరి సామాజిక వర్గాల మహిళలకు వ్యాపార/జీవనోపాధి ఆర్థిక మద్దతు."
+  },
+  {
+    "id": "ap-016",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Law Nestham",
+    "name_local": "వైఎస్ఆర్ లా నేస్తం",
+    "category": "Employment",
+    "min_age": 22,
+    "max_age": 35,
+    "income_limit": 250000,
+    "occupations": [
+      "Student",
+      "Self-Employed",
+      "Advocate"
+    ],
+    "eligibility": "Junior Advocates enrolled in the State Bar Council within the last 3 years.",
+    "benefit": "₹5,000 per month stipend for 3 years.",
+    "documents": [
+      "Law Degree Certificate",
+      "Bar Council Registration",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Register on Law Nestham portal",
+      "Verification by Law Department",
+      "Monthly stipend credited"
+    ],
+    "link": "https://ysrlawnestham.ap.gov.in/",
+    "description_en": "Monthly stipend to support Junior Advocates during their initial practice years.",
+    "description_local": "జూనియర్ న్యాయవాదులకు వారి ప్రారంభ ప్రాక్టీస్ సమయంలో మద్దతుగా నెలవారీ స్టైపెండ్."
+  },
+  {
+    "id": "ap-017",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Gorumudda",
+    "name_local": "జగనన్న గోరుముద్ద",
+    "category": "Food Security",
+    "min_age": 5,
+    "max_age": 16,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students studying in classes 1 to 10 in Government/Aided schools.",
+    "benefit": "Upgraded, highly nutritious mid-day meal with daily varying menus including ragi malt, jaggery, eggs, and peanut chikki.",
+    "documents": [
+      "School Enrollment"
+    ],
+    "steps": [
+      "Enroll child in AP govt school",
+      "Meals provided during lunch break autonomously"
+    ],
+    "link": "https://cse.ap.gov.in/",
+    "description_en": "Enhanced mid-day meal scheme with a rich, daily changing menu to tackle malnutrition.",
+    "description_local": "పోషకాహార లేమిని అరికట్టడానికి రుచికరమైన మరియు ఆరోగ్యవంతమైన మధ్యాహ్న భోజన పథకం."
+  },
+  {
+    "id": "ap-018",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Vidya Kanuka",
+    "name_local": "జగనన్న విద్యా కానుక",
+    "category": "Education",
+    "min_age": 5,
+    "max_age": 16,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "All students from class 1 to 10 in Government Schools.",
+    "benefit": "Free student kit comprising 3 pairs of uniforms, textbooks, notebooks, school bag, shoes, socks, and dictionary.",
+    "documents": [
+      "Aadhaar",
+      "School ID"
+    ],
+    "steps": [
+      "Admit student to government school",
+      "Kits distributed on reopening day"
+    ],
+    "link": "https://cse.ap.gov.in/",
+    "description_en": "Free distribution of essential educational materials kit to students at the start of the academic year.",
+    "description_local": "విద్యా సంవత్సరం ప్రారంభంలో విద్యార్థులకు ఉచిత విద్యా కిట్."
+  },
+  {
+    "id": "ap-019",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "Jagananna Chedodu",
+    "name_local": "జగనన్న చేదోడు",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 144000,
+    "occupations": [
+      "Self-Employed",
+      "Worker"
+    ],
+    "eligibility": "Rajakas (washermen), Nayee Brahmins (barbers), and Tailors from BPL families.",
+    "benefit": "₹10,000 per year one-time financial assistance.",
+    "documents": [
+      "Shop Registration/Verification",
+      "Aadhaar",
+      "Income Certificates",
+      "Caste Certificate"
+    ],
+    "steps": [
+      "Apply via Village Secretariat",
+      "Verification of shop/profession by volunteers",
+      "Money credited to bank"
+    ],
+    "link": "https://navasakam.ap.gov.in/",
+    "description_en": "Financial support for traditional artisans and service providers.",
+    "description_local": "రజకులు, నాయీ బ్రాహ్మణులు, దర్జీలకు వార్షిక ఆర్థిక సహాయం."
+  },
+  {
+    "id": "ap-020",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Sampoorna Poshana",
+    "name_local": "వైఎస్ఆర్ సంపూర్ణ పోషణ",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 6,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Pregnant women, lactating mothers, and children aged 6 months to 6 years.",
+    "benefit": "Take Home Ration (THR) dry rations, milk, eggs, and hot cooked meals through Anganwadis.",
+    "documents": [
+      "Aadhaar Card",
+      "Health Card (MCP)"
+    ],
+    "steps": [
+      "Register at local Anganwadi center",
+      "Receive daily/monthly nutrition kits"
+    ],
+    "link": "https://wdcw.ap.gov.in/",
+    "description_en": "Comprehensive nutrition program for mothers and infants to combat anemia and stunting.",
+    "description_local": "గర్భిణీ స్త్రీలు, బాలింతలు మరియు చిన్నపిల్లలకు సంపూర్ణ పోషకాహారం."
+  },
+  {
+    "id": "ap-021",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR Kanti Velugu",
+    "name_local": "వైఎస్ఆర్ కంటి వెలుగు",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "All citizens of Andhra Pradesh suffering from vision problems.",
+    "benefit": "Free eye screenings, free spectacles, and free cataract/eye surgeries.",
+    "documents": [
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Attend screening camp in your ward/school",
+      "Get free prescription glasses",
+      "Referral for surgery if required"
+    ],
+    "link": "https://hmfw.ap.gov.in/",
+    "description_en": "Universal free eye care scheme covering screening to surgeries.",
+    "description_local": "ఉచిత కంటి పరీక్షలు, కళ్లద్దాలు మరియు శస్త్రచికిత్సలు."
+  },
+  {
+    "id": "ap-022",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "YSR EBC Nestham",
+    "name_local": "వైఎస్ఆర్ ఈబీసీ నేస్తం",
+    "category": "Women Empowerment",
+    "min_age": 45,
+    "max_age": 60,
+    "income_limit": 120000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "All"
+    ],
+    "eligibility": "Poor women from Economically Backward Classes (EBC) / Forward castes.",
+    "benefit": "₹15,000 per annum financial assistance for up to 3 years.",
+    "documents": [
+      "Income Certificate",
+      "Caste proof",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply at Ward/Village secretariat",
+      "Verification of EBC status",
+      "Direct deposit"
+    ],
+    "link": "https://navasakam.ap.gov.in/",
+    "description_en": "Financial assistance to poor unreserved caste women to support their livelihood.",
+    "description_local": "ఆర్థికంగా వెనుకబడిన తరగతుల (ఓసీ) మహిళలకు ఆర్థిక సహాయం."
+  },
+  {
+    "id": "ap-023",
+    "state": "AP",
+    "state_name": "Andhra Pradesh",
+    "name_en": "AP Jagananna Smart Town Scheme",
+    "name_local": "జగనన్న స్మార్ట్ టౌన్",
+    "category": "Housing",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 1800000,
+    "occupations": [
+      "Worker",
+      "Self-Employed",
+      "Government Employee",
+      "All"
+    ],
+    "eligibility": "Middle-income group citizens with income up to ₹18 lakhs.",
+    "benefit": "Developed plots offered at highly subsidized, below-market prices to Middle Income Groups (MIG).",
+    "documents": [
+      "Income Certificate",
+      "Aadhaar",
+      "PAN Card"
+    ],
+    "steps": [
+      "Apply online via portal",
+      "Pay 10% advance",
+      "Lottery allotment system",
+      "Remaining payment in installments"
+    ],
+    "link": "https://migaptdidco.ap.gov.in/",
+    "description_en": "Providing litigation-free, clear-title housing plots for the middle class at affordable prices.",
+    "description_local": "మధ్యతరగతి ప్రజలకు సరసమైన ధరలలో క్లియర్ టైటిల్ తో కూడిన ప్లాట్లు."
+  },
+  {
+    "id": "ka-014",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Bhagyalakshmi Scheme",
+    "name_local": "ಭಾಗ್ಯಲಕ್ಷ್ಮಿ ಯೋಜನೆ",
+    "category": "Women & Child",
+    "min_age": 0,
+    "max_age": 2,
+    "income_limit": 20000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Girl child born in BPL families. Maximum of two girls per family.",
+    "benefit": "Fixed deposit of ₹19,300, maturing to ₹1,00,000+ when she turns 18. Also provides health insurance & scholarships.",
+    "documents": [
+      "Birth Certificate",
+      "BPL Card",
+      "Parents' Aadhaar"
+    ],
+    "steps": [
+      "Register at Anganwadi within 1 year of birth",
+      "Submit proofs",
+      "Receive Bhagyalakshmi Bond"
+    ],
+    "link": "https://dwcd.karnataka.gov.in",
+    "description_en": "Financial security scheme for girl children to promote their education and combat child labor.",
+    "description_local": "ಹೆಣ್ಣು ಮಕ್ಕಳ ಭವಿಷ್ಯ ಹಾಗೂ ಶಿಕ್ಷಣ ಭದ್ರತೆಗಾಗಿ ಬಾಂಡ್."
+  },
+  {
+    "id": "ka-015",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Bidaai Scheme (Shaadi Bhagya)",
+    "name_local": "ಬಿದಾಯಿ (ಶಾದಿ ಭಾಗ್ಯ) ಯೋಜನೆ",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 35,
+    "income_limit": 150000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Minority community (Muslim, Christian, Jain, etc.) brides from BPL families.",
+    "benefit": "₹50,000 financial assistance for marriage expenses.",
+    "documents": [
+      "Income Certificate",
+      "Minority Certificate",
+      "Age Proof",
+      "Marriage Invitation/Registration"
+    ],
+    "steps": [
+      "Register via Directorate of Minorities",
+      "Submit application 1 month prior",
+      "Verification and direct transfer"
+    ],
+    "link": "https://dom.karnataka.gov.in/",
+    "description_en": "Financial assistance for the marriage of poor girls belonging to minority communities.",
+    "description_local": "ಅಲ್ಪಸಂಖ್ಯಾತ ಸಮುದಾಯದ ಬಡ ಹೆಣ್ಣುಮಕ್ಕಳ ಮದುವೆಗೆ ಆರ್ಥಿಕ ಸಹಾಯ."
+  },
+  {
+    "id": "ka-016",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Ganga Kalyana Scheme",
+    "name_local": "ಗಂಗಾ ಕಲ್ಯಾಣ ಯೋಜನೆ",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 50000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Small/Marginal farmers belonging to SC/ST/OBC categories.",
+    "benefit": "Free borewell drilling, pump-set installation, and electrification for agricultural land.",
+    "documents": [
+      "Caste Certificate",
+      "Small Farmer Certificate",
+      "Land RTC",
+      "Aadhaar"
+    ],
+    "steps": [
+      "Apply at respective Corporation (e.g. Ambedkar Dev Corp)",
+      "Hydrologist survey",
+      "Fund sanctioned for drilling"
+    ],
+    "link": "https://adcl.karnataka.gov.in/",
+    "description_en": "Providing irrigation facilities to farmers by drilling borewells at government cost.",
+    "description_local": "ರೈತರ ಜಮೀನಿಗೆ ನೀರಾವರಿ ಒದಗಿಸಲು ಉಚಿತ ಕೊಳವೆ ಬಾವಿ ನಿರ್ಮಾಣ."
+  },
+  {
+    "id": "ka-017",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Krishi Bhagya Scheme",
+    "name_local": "ಕೃಷಿ ಭಾಗ್ಯ ಯೋಜನೆ",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 75,
+    "income_limit": 1000000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Farmers in dry-land and drought-prone regions.",
+    "benefit": "Subsidies ranging from 80-90% for constructing farm ponds (Krishi Hondas), polythene lining, and diesel pumps.",
+    "documents": [
+      "Land RTC",
+      "Bank Passbook",
+      "Aadhaar"
+    ],
+    "steps": [
+      "Apply at Raitha Samparka Kendra",
+      "Site inspection",
+      "Subsidy released after construction"
+    ],
+    "link": "https://raitamitra.karnataka.gov.in/",
+    "description_en": "Rainwater harvesting and dryland farming support through farm pond subsidies.",
+    "description_local": "ಒಣಭೂಮಿ ರೈತರಿಗೆ ಕೃಷಿ ಹೊಂಡ ನಿರ್ಮಾಣಕ್ಕಾಗಿ ಸಬ್ಸಿಡಿ."
+  },
+  {
+    "id": "ka-018",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Ksheera Bhagya Scheme",
+    "name_local": "ಕ್ಷೀರ ಭಾಗ್ಯ ಯೋಜನೆ",
+    "category": "Food Security",
+    "min_age": 3,
+    "max_age": 16,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student",
+      "All"
+    ],
+    "eligibility": "Children going to Anganwadis and Government/Aided schools (Classes 1-10).",
+    "benefit": "Free hot milk (150 ml) provided 5 days a week in schools/Anganwadis.",
+    "documents": [
+      "School/Anganwadi Enrollment"
+    ],
+    "steps": [
+      "Enroll child in school",
+      "Milk distributed daily automatically"
+    ],
+    "link": "https://schooleducation.kar.nic.in/",
+    "description_en": "Providing milk to school children to combat malnutrition and prevent calcium deficiency.",
+    "description_local": "ಶಾಲಾ ಮಕ್ಕಳು ಮತ್ತು ಅಂಗನವಾಡಿ ಮಕ್ಕಳಿಗೆ ಉಚಿತ ಹಾಲು ವಿತರಣೆ."
+  },
+  {
+    "id": "ka-019",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Anila Bhagya Scheme",
+    "name_local": "ಅನಿಲ ಭಾಗ್ಯ ಯೋಜನೆ",
+    "category": "Energy",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 150000,
+    "occupations": [
+      "Homemaker",
+      "Worker",
+      "All"
+    ],
+    "eligibility": "BPL households not covered under the central PM Ujjwala Scheme.",
+    "benefit": "Free LPG gas connection, a twin-burner gas stove, and two free refill cylinders.",
+    "documents": [
+      "BPL Card",
+      "Aadhaar Card"
+    ],
+    "steps": [
+      "Apply at local Gram Panchayat or Nada Kacheri",
+      "Verification of no existing LPG connection",
+      "Supply of stove & gas"
+    ],
+    "link": "https://ahara.kar.nic.in/",
+    "description_en": "Providing clean cooking fuel (LPG connections) to BPL families to protect women's health.",
+    "description_local": "ಬಿಪಿಎಲ್ ಕುಟುಂಬಗಳಿಗೆ ಉಚಿತ ಅಡುಗೆ ಅನಿಲ ಮತ್ತು ಸ್ಟವ್."
+  },
+  {
+    "id": "ka-020",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Pashu Bhagya Scheme",
+    "name_local": "ಪಶು ಭಾಗ್ಯ ಯೋಜನೆ",
+    "category": "Agriculture",
+    "min_age": 18,
+    "max_age": 65,
+    "income_limit": 500000,
+    "occupations": [
+      "Farmer"
+    ],
+    "eligibility": "Small/marginal farmers and agricultural laborers.",
+    "benefit": "Highly subsidized bank loans (33% for General, 50% for SC/ST) for purchasing cattle, sheep, goats, or poultry.",
+    "documents": [
+      "Land limits cert (if farmer)",
+      "Caste Certificate",
+      "Aadhaar"
+    ],
+    "steps": [
+      "Apply through Dept of Animal Husbandry",
+      "Bank sanctions loan",
+      "Subsidy deposited directly to loan account"
+    ],
+    "link": "https://ahvs.karnataka.gov.in/",
+    "description_en": "Subsidized loans for livestock farming to boost allied agricultural income.",
+    "description_local": "ರೈತರಿಗೆ ಹೈನುಗಾರಿಕೆ ಮತ್ತು ಕುರಿ-ಕೋಳಿ ಸಾಕಾಣಿಕೆಗೆ ಸಬ್ಸಿಡಿ ಸಾಲ."
+  },
+  {
+    "id": "ka-021",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Rajiv Gandhi Chaitanya Yojana",
+    "name_local": "ರಾಜೀವ್ ಗಾಂಧಿ ಚೈತನ್ಯ ಯೋಜನೆ",
+    "category": "Skill Development",
+    "min_age": 18,
+    "max_age": 35,
+    "income_limit": 250000,
+    "occupations": [
+      "Unemployed",
+      "Student"
+    ],
+    "eligibility": "Unemployed rural youth.",
+    "benefit": "Free skill training + financial assistance to start self-employment ventures.",
+    "documents": [
+      "SSLC/12th Marks Card",
+      "Aadhaar",
+      "Income Certificate"
+    ],
+    "steps": [
+      "Register at Gram Panchayat",
+      "Undergo placement-linked training",
+      "Avail bank linkage to start enterprise"
+    ],
+    "link": "https://skillkarnataka.com/",
+    "description_en": "Training and guiding unemployed rural youth to become self-reliant entrepreneurs.",
+    "description_local": "ಗ್ರಾಮೀಣ ನಿರುದ್ಯೋಗಿ ಯುವಕರಿಗೆ ಕೌಶಲ್ಯ ತರಬೇತಿ ಮತ್ತು ಸ್ವಯಂ ಉದ್ಯೋಗ ಮಾರ್ಗದರ್ಶನ."
+  },
+  {
+    "id": "ka-022",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Arivu Scheme",
+    "name_local": "ಅರಿವು ಯೋಜನೆ",
+    "category": "Education",
+    "min_age": 16,
+    "max_age": 30,
+    "income_limit": 800000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Students from minority communities pursuing professional courses (Medical, Engineering, etc.) through CET/NEET.",
+    "benefit": "Education loan from ₹50,000 to ₹3,00,000 per year at an ultra-low 2% interest rate.",
+    "documents": [
+      "CET/NEET allotment order",
+      "Minority Certificate",
+      "Income Certificate",
+      "Aadhaar"
+    ],
+    "steps": [
+      "Apply to Karnataka Minorities Development Corporation",
+      "Loan sanctioned directly to college"
+    ],
+    "link": "https://kmdc.karnataka.gov.in/",
+    "description_en": "Low-interest educational loans for minority students pursuing professional degrees.",
+    "description_local": "ವೃತ್ತಿಪರ ಕೋರ್ಸ್‌ಗಳನ್ನು ವ್ಯಾಸಂಗ ಮಾಡುವ ಅಲ್ಪಸಂಖ್ಯಾತ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕಡಿಮೆ ಬಡ್ಡಿ ಸಾಲ."
+  },
+  {
+    "id": "ka-023",
+    "state": "KA",
+    "state_name": "Karnataka",
+    "name_en": "Saptapadi Scheme",
+    "name_local": "ಸಪ್ತಪದಿ ವಿವಾಹ ಯೋಜನೆ",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 35,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Hindu couples getting married under mass marriage events conducted by Muzrai department temples.",
+    "benefit": "8 gram gold mangalsutra, ₹10,000 fixed deposit for bride, ₹5,000 cash for groom, and wedding expenses covered.",
+    "documents": [
+      "Age Proof",
+      "Aadhaar",
+      "Unmarried Certificate from Panchayat"
+    ],
+    "steps": [
+      "Register at A-grade state temple 30 days prior",
+      "Participate in mass marriage event"
+    ],
+    "link": "https://eservices.karnataka.gov.in/",
+    "description_en": "Mass marriage scheme offering financial support and gold to couples to reduce wedding debt.",
+    "description_local": "ಮುಜರಾಯಿ ದೇವಾಲಯಗಳಲ್ಲಿ ಸಾಮೂಹಿಕ ವಿವಾಹವಾಗುವ ದಂಪತಿಗಳಿಗೆ ಚಿನ್ನ ಮತ್ತು ನಗದು."
+  },
+  {
+    "id": "kl-013",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Vayomithram Scheme",
+    "name_local": "വയോമിത്രം പദ്ധതി",
+    "category": "Health",
+    "min_age": 65,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "Senior Citizen",
+      "All"
+    ],
+    "eligibility": "Senior citizens residing in corporation/municipality areas.",
+    "benefit": "Free mobile clinics, supply of free medicines, palliative care, and counseling.",
+    "documents": [
+      "Aadhaar",
+      "Age Proof"
+    ],
+    "steps": [
+      "Register at Local Vayomithram center",
+      "Attend mobile clinic camps in your ward"
+    ],
+    "link": "https://kssm.kerala.gov.in/",
+    "description_en": "Providing healthcare and support services to the elderly residing in urban areas.",
+    "description_local": "നഗരപ്രദേശങ്ങളിലെ മുതിർന്ന പൗരന്മാർക്ക് സൗജന്യ വൈദ്യസഹായവും മരുന്നും."
+  },
+  {
+    "id": "kl-014",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Snehasparsham Scheme",
+    "name_local": "സ്നേഹസ്പർശം",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Unwed mothers facing severe social and financial hardship.",
+    "benefit": "₹1,000 monthly financial assistance.",
+    "documents": [
+      "Certificate from Village Officer/CDPO",
+      "Child's Birth Certificate",
+      "Aadhaar"
+    ],
+    "steps": [
+      "Apply via Child Development Project Officer (CDPO)",
+      "Verification",
+      "Direct Transfer"
+    ],
+    "link": "https://sjd.kerala.gov.in/",
+    "description_en": "Monthly pension ensuring the social and financial security of unwed mothers.",
+    "description_local": "അവിവാഹിതരായ അമ്മമാർക്ക് സാമ്പത്തിക പരിരക്ഷ നൽകുന്ന മാസ പെൻഷൻ."
+  },
+  {
+    "id": "kl-015",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Thalolam Scheme",
+    "name_local": "താലോലം",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 18,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Children below 18 years requiring treatment for critical diseases (kidney, heart, cerebral palsy) and cannot afford it.",
+    "benefit": "Free treatment at major government hospitals (up to ₹50,000 initially, extendable up to ₹1 Lakh).",
+    "documents": [
+      "Medical Certificate",
+      "BPL/Income certificate (preferred but flexed for life-threatening cases)"
+    ],
+    "steps": [
+      "Admit child in Medical College Hospital",
+      "Apply via hospital Superintendent"
+    ],
+    "link": "https://kssm.kerala.gov.in/",
+    "description_en": "Free treatment for kids under 18 suffering from fatal diseases.",
+    "description_local": "മാരക രോഗങ്ങളുള്ള കുട്ടികൾക്ക് സർക്കാർ മെഡിക്കൽ കോളേജുകളിൽ സൗജന്യ ചികിത്സ."
+  },
+  {
+    "id": "kl-016",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Mathruyanam Scheme",
+    "name_local": "മാതൃയാനം",
+    "category": "Health",
+    "min_age": 18,
+    "max_age": 45,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Women delivering babies in government hospitals.",
+    "benefit": "Free taxi drop-back service from the hospital to their homes after childbirth.",
+    "documents": [
+      "Hospital Discharge Summary"
+    ],
+    "steps": [
+      "Inform hospital nurse during discharge",
+      "Free taxi is arranged by the hospital"
+    ],
+    "link": "https://arogyakeralam.gov.in/",
+    "description_en": "Ensuring safe transit by providing free cabs for mothers and newborns returning home.",
+    "description_local": "പ്രസവശേഷം അമ്മയ്ക്കും കുഞ്ഞിനും വീട്ടിലേക്ക് മടങ്ങാൻ സൗജന്യ ടാക്സി വിതരണം."
+  },
+  {
+    "id": "kl-017",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Mangalya Scheme",
+    "name_local": "മാംഗല്യ",
+    "category": "Women Empowerment",
+    "min_age": 20,
+    "max_age": 55,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Widows and legally divorced women getting remarried to overcome social stigma.",
+    "benefit": "One-time financial assistance of ₹25,000.",
+    "documents": [
+      "Widow/Divorce proof",
+      "Marriage Registration Certificate",
+      "Age Proof"
+    ],
+    "steps": [
+      "Apply online or via CDPO within 6 months of marriage",
+      "Submit certificates",
+      "Amount credited to bank"
+    ],
+    "link": "https://sjd.kerala.gov.in/",
+    "description_en": "Promoting the remarriage of widows and divorced women through financial aid.",
+    "description_local": "വിധവകൾക്കും വിവാഹമോചിതർക്കും പുനർവിവാഹത്തിന് സാമ്പത്തിക സഹായം."
+  },
+  {
+    "id": "kl-018",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Vidyajyothi Scheme",
+    "name_local": "വിദ്യാജ്യോതി",
+    "category": "Education",
+    "min_age": 14,
+    "max_age": 22,
+    "income_limit": 1000000,
+    "occupations": [
+      "Student"
+    ],
+    "eligibility": "Differently abled students studying in 9th degree/ITI.",
+    "benefit": "Financial aid ranging from ₹1,000 to ₹1,500 for purchasing uniforms, study materials, and paying fees.",
+    "documents": [
+      "Disability Certificate",
+      "School ID/Principal's certificate"
+    ],
+    "steps": [
+      "Apply via District Social Justice Officer",
+      "Approval by Directorate",
+      "Stipend given annually"
+    ],
+    "link": "https://sjd.kerala.gov.in/",
+    "description_en": "Financial assistance to physically challenged students for purchasing study materials.",
+    "description_local": "ഭിന്നശേഷിക്കാരായ വിദ്യാർത്ഥികൾക്ക് പഠനോപകരണങ്ങൾ വാങ്ങാൻ സാമ്പത്തിക സഹായം."
+  },
+  {
+    "id": "kl-019",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Sahayahastham Scheme",
+    "name_local": "സഹായഹസ്തം",
+    "category": "Social Security",
+    "min_age": 18,
+    "max_age": 60,
+    "income_limit": 100000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Widows of highly indebted farmers / farmers who committed suicide.",
+    "benefit": "Financial assistance to clear debts and engage in self-employment ventures.",
+    "documents": [
+      "Death Certificate of husband",
+      "Debt records",
+      "Village Officer Report"
+    ],
+    "steps": [
+      "Apply via District Collectorate",
+      "Case verified by Revenue Department",
+      "Aid disbursed"
+    ],
+    "link": "https://sjd.kerala.gov.in/",
+    "description_en": "Helping destitute widows of debt-ridden farmers rebuild their lives.",
+    "description_local": "കടക്കെണിയിലായ കർഷകരുടെ വിധവകൾക്ക് ബാധ്യതകൾ തീർക്കാനും പുതിയ ജീവിതം തുടങ്ങാനുമുള്ള ധനസഹായം."
+  },
+  {
+    "id": "kl-020",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Swasraya Scheme",
+    "name_local": "സ്വാശ്രയ പദ്ധതി",
+    "category": "Employment",
+    "min_age": 18,
+    "max_age": 55,
+    "income_limit": 100000,
+    "occupations": [
+      "Self-Employed",
+      "Homemaker"
+    ],
+    "eligibility": "Mothers of severely disabled or mentally retarded children.",
+    "benefit": "Subsidized loan up to ₹35,000 to start self-employment while stationed at home.",
+    "documents": [
+      "Child's Disability Certificate",
+      "Income Certificate",
+      "Small Project Plan"
+    ],
+    "steps": [
+      "Apply via Panchayat/CDPO",
+      "Plan approval",
+      "Loan sanctioned"
+    ],
+    "link": "https://sjd.kerala.gov.in/",
+    "description_en": "Self-employment assistance to mothers of severely disabled children.",
+    "description_local": "തീവ്ര വൈകല്യമുള്ള കുട്ടികളുടെ അമ്മമാർക്ക് വീട്ടിലിരുന്ന് ചെയ്യാവുന്ന സ്വയം തൊഴിലിന് സഹായം."
+  },
+  {
+    "id": "kl-021",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "Hunger Free Kerala (Janakeeya Hotel)",
+    "name_local": "വിശപ്പുരഹിത കേരളം (ജനകീയ ഹോട്ടൽ)",
+    "category": "Food Security",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Any citizen, special subsidies for destitute.",
+    "benefit": "Nutritious full-course lunch available for just ₹20.",
+    "documents": [
+      "None required"
+    ],
+    "steps": [
+      "Walk into any Kudumbashree Janakeeya Hotel",
+      "Pay ₹20 and get a meal"
+    ],
+    "link": "https://kudumbashree.org/",
+    "description_en": "Providing high-quality meals at highly subsidized rates (₹20) to ensure no one starves.",
+    "description_local": "വെറും 20 രൂപയ്ക്ക് ഗുണനിലവാരമുള്ള ഉച്ചഭക്ഷണം ലഭ്യമാക്കുന്ന പദ്ധതി."
+  },
+  {
+    "id": "kl-022",
+    "state": "KL",
+    "state_name": "Kerala",
+    "name_en": "We Care Scheme",
+    "name_local": "വീ കെയർ",
+    "category": "Health",
+    "min_age": 0,
+    "max_age": 100,
+    "income_limit": 1000000,
+    "occupations": [
+      "All"
+    ],
+    "eligibility": "Individuals requiring emergency expensive treatments like organ transplant, not covered by existing schemes.",
+    "benefit": "Crowdfunded and government-backed financial assistance for ultra-expensive surgeries.",
+    "documents": [
+      "Super Specialist Medical Report",
+      "BPL proof highly preferred",
+      "Hospital Quotation"
+    ],
+    "steps": [
+      "Apply at Kerala Social Security Mission portal",
+      "Executive committee approval",
+      "Fund transferred to hospital"
+    ],
+    "link": "https://kssm.kerala.gov.in/",
+    "description_en": "Financial aid for extremely expensive surgeries like heart or kidney transplants.",
+    "description_local": "അവയവം മാറ്റിവെക്കൽ പോലുള്ള വലിയ ചെലവുള്ള ലക്ഷക്കണക്കിന് രൂപയുടെ ചികിത്സകൾക്ക് സഹായം."
+  }
+]
