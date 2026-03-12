@@ -1,8 +1,8 @@
 # 🤝 Namma Sahaya | நம்ம சகாயா
 
-**Pan-India Multilingual Government Schemes Assistant with Voice-First Interface**
+**Pan-India multilingual government schemes assistant (text + voice)**
 
-A modern, voice-first chatbot built with Next.js 14 that helps Indian citizens discover government schemes in their native language. Supports 6 languages with 50+ schemes from South Indian states and national level.
+A modern, voice-first chatbot built with **Next.js (App Router)** that helps Indian citizens discover government schemes in their native language. Supports **6 languages** with a local database of **50+ schemes** (South Indian states + national).
 
 ![Namma Sahaya](https://img.shields.io/badge/Languages-6-green) ![Schemes](https://img.shields.io/badge/Schemes-50%2B-blue) ![Voice](https://img.shields.io/badge/Interface-Voice%20First-purple)
 
@@ -38,9 +38,17 @@ A modern, voice-first chatbot built with Next.js 14 that helps Indian citizens d
 ### 🤖 AI-Powered Responses
 
 - Groq API with Llama 3.1 70B model
-- RAG-based scheme matching from local database
+- RAG-style scheme matching from the local database
 - Intelligent fallback when API is unavailable
 - Context-aware multilingual responses
+
+### 🧭 Pages (in this repo)
+
+- `/` - Landing page
+- `/chatbot` - Main chat UI
+- `/find-schemes` - Scheme finder by profile
+- `/about` - About the project
+- `/how-it-works` - How it works
 
 ## 🚀 Quick Start
 
@@ -54,14 +62,13 @@ A modern, voice-first chatbot built with Next.js 14 that helps Indian citizens d
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd bot
+cd chatbot
 
 # Install dependencies
 npm install
 
-# Set up environment variables
-cp .env.example .env.local
-# Edit .env.local and add your GROQ_API_KEY
+# Set up environment variables (optional)
+# Create .env.local and add GROQ_API_KEY if you want Groq chat + Whisper transcription.
 
 # Start development server
 npm run dev
@@ -77,24 +84,39 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 \*The app works without the API key using intelligent fallback responses from the local schemes database.
 
-**Get your free Groq API key:** [https://console.groq.com](https://console.groq.com)
+**Get your Groq API key:** [https://console.groq.com](https://console.groq.com)
+
+Create `.env.local` at the project root:
+
+```bash
+GROQ_API_KEY=your_key_here
+```
 
 ## 📁 Project Structure
 
 ```
+public/
+└── logo.png
 src/
 ├── app/
 │   ├── layout.tsx          # Root layout with multilingual fonts
-│   ├── page.tsx            # Main chat interface
+│   ├── page.tsx            # Landing page
+│   ├── about/page.tsx
+│   ├── how-it-works/page.tsx
+│   ├── chatbot/page.tsx    # Main chat UI
+│   ├── find-schemes/page.tsx
 │   ├── globals.css         # Complete design system
 │   └── api/
 │       ├── chat/route.ts   # AI chat endpoint (Groq + RAG)
+│       ├── schemes/route.ts # Scheme-finder endpoint (query → matches)
 │       └── voice/route.ts  # Voice transcription endpoint
 ├── components/
 │   ├── VoiceRecorder.tsx   # 🎤 Voice recording with waveform
 │   ├── ChatBubble.tsx      # Message display component
 │   ├── LanguageBar.tsx     # Language selector
-│   └── SchemeCard.tsx      # Scheme info cards
+│   ├── Navbar.tsx          # Top navigation
+│   ├── SchemeCard.tsx      # Scheme info cards
+│   └── SchemeFinder.tsx    # Finder UI
 ├── lib/
 │   ├── schemes.ts          # Scheme search & utilities
 │   └── languages.ts        # Language configuration
@@ -104,21 +126,62 @@ src/
     └── speech.d.ts         # Web Speech API types
 ```
 
+### Helper scripts
+
+These scripts are included to help maintain `src/data/schemes.json`:
+
+- `add-schemes.js`
+- `add-more-schemes.js`
+- `fix-schemes.js`
+
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js (App Router)
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS + Custom CSS Design System
+- **Styling**: Tailwind CSS + custom CSS design system
 - **AI**: Groq API (Llama 3.1 70B Versatile)
 - **Voice**: Web Speech API + Whisper Large v3
 - **Fonts**: Google Fonts (Noto Sans for all Indic scripts)
 - **Animation**: CSS Animations + Canvas Waveform
 
+## 🔌 API Routes
+
+### `POST /api/chat`
+
+Request body:
+
+```json
+{ "message": "…", "language": "ta|te|kn|ml|hi|en" }
+```
+
+Response:
+
+- `reply`: assistant response (Markdown)
+- `schemes`: up to 5 matched schemes
+
+### `POST /api/voice`
+
+Multipart form-data:
+
+- `audio`: audio file
+- `language`: `ta|te|kn|ml|hi|en` (optional)
+
+If `GROQ_API_KEY` is missing/unavailable, the API responds with a fallback payload so the UI can use browser speech recognition.
+
+### `GET /api/schemes`
+
+Query params:
+
+- `age` (number)
+- `income` (number)
+- `occupation` (string)
+- `state` (string, default `All`)
+
 ## 🚢 Deployment (Vercel)
 
 ### 1-Click Deploy
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=YOUR_REPO_URL)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone)
 
 ### Manual Deploy
 
