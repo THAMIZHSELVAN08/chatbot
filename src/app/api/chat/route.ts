@@ -21,39 +21,58 @@ export async function POST(req: NextRequest) {
       ? getSchemeSummaryForAI(relevantSchemes.slice(0, 8))
       : 'No specific schemes found for this query. Provide general guidance.';
 
+    // Strict language rules for each supported language
     const languageInstructions: Record<string, string> = {
-      ta: 'Respond ENTIRELY in Tamil (தமிழ்). Use Tamil script for all content.',
-      te: 'Respond ENTIRELY in Telugu (తెలుగు). Use Telugu script for all content.',
-      kn: 'Respond ENTIRELY in Kannada (ಕನ್ನಡ). Use Kannada script for all content.',
-      ml: 'Respond ENTIRELY in Malayalam (മലയാളം). Use Malayalam script for all content.',
-      hi: 'Respond ENTIRELY in Hindi (हिंदी). Use Devanagari script for all content.',
+      ta: 'RESPOND ENTIRELY IN TAMIL (தமிழ்). Write EVERY word in Tamil script. DO NOT write anything in English except URLs.',
+      te: 'RESPOND ENTIRELY IN TELUGU (తెలుగు). Write EVERY word in Telugu script. DO NOT write anything in English except URLs.',
+      kn: 'RESPOND ENTIRELY IN KANNADA (ಕನ್ನಡ). Write EVERY word in Kannada script. DO NOT write anything in English except URLs.',
+      ml: 'RESPOND ENTIRELY IN MALAYALAM (മലയാളം). Write EVERY word in Malayalam script. DO NOT write anything in English except URLs.',
+      hi: 'RESPOND ENTIRELY IN HINDI (हिंदी). Write EVERY word in Devanagari script. DO NOT write anything in English except URLs.',
       en: 'Respond in simple, clear English. Avoid jargon.',
     };
 
-    const systemPrompt = `You are "SevaAI", a highly accurate and friendly Pan-India government schemes assistant.
+    // Localized section labels
+    const sectionLabels: Record<string, Record<string, string>> = {
+      ta: { benefit: 'ஆதாயம்', elig: 'தகுதி', docs: 'ஆவணங்கள்', steps: 'விண்ணப்பிக்கும் முறை', link: 'அதிகாரப்பூர்வ இணைப்பு' },
+      te: { benefit: 'ప్రయోజనం', elig: 'అర్హత', docs: 'పత్రాలు', steps: 'దరఖాస్తు విధానం', link: 'అధికారిక లింక్' },
+      kn: { benefit: 'ಪ್ರಯೋಜನ', elig: 'ಅರ್ಹತೆ', docs: 'ದಾಖಲೆಗಳು', steps: 'ಅರ್ಜಿ ಸಲ್ಲಿಕೆ', link: 'ಅಧಿಕೃತ ಲಿಂಕ್' },
+      ml: { benefit: 'ആനുകൂല്യം', elig: 'യോഗ്യത', docs: 'രേഖകൾ', steps: 'അപേക്ഷ നടപടി', link: 'ഔദ്യോഗിക ലിങ്ക്' },
+      hi: { benefit: 'लाभ', elig: 'पात्रता', docs: 'दस्तावेज़', steps: 'कैसे आवेदन करें', link: 'आधिकारिक लिंक' },
+      en: { benefit: 'Benefit', elig: 'Eligibility', docs: 'Documents', steps: 'How to Apply', link: 'Official Link' },
+    };
 
-LANGUAGE RULE: ${languageInstructions[language] || languageInstructions.en}
+    const lbl = sectionLabels[language] || sectionLabels.en;
+    const langRule = languageInstructions[language] || languageInstructions.en;
 
-CRITICAL INSTRUCTION:
-You must ONLY answer based on the "RELEVANT SCHEMES DATA" provided below. If the provided data does not contain the answer, explicitly state that you don't have that specific scheme's details and suggest they visit myScheme.gov.in or contact the nearest e-Seva center. Do NOT hallucinate or invent scheme details.
-
-PERSONALITY:
-- Warm, patient, and encouraging
-- Use simple language suitable for everyone
-- Be extremely specific with amounts (in ₹), age limits, and required documents.
-
-RESPONSE FORMAT (Use Markdown for readability):
-1. Greet briefly in the user's language.
-2. Directly answer their query using data from the matching schemes.
-3. List the **Eligibility** and **Benefits** clearly.
-4. Provide a bulleted list of **Required Documents**.
-5. Give the **Step-by-Step Application Process**.
-6. Provide the **Official Link** if available.
-
-RELEVANT SCHEMES DATA:
-${schemesContext}
-
-IMPORTANT: Keep responses concise, well-structured, and factual.`;
+    const systemPrompt = [
+      `⚠️ LANGUAGE RULE (HIGHEST PRIORITY): ${langRule}`,
+      '',
+      `You are "SevaAI", a highly accurate and friendly Pan-India government schemes assistant.`,
+      '',
+      `⚠️ TRANSLATION DUTY: The scheme data below is stored in English. You MUST translate EVERY piece of information — benefits, eligibility criteria, document names, application steps — into ${lang.name}. Do NOT copy-paste English text. Only URLs may stay in English.`,
+      '',
+      `PERSONALITY:`,
+      `- Warm, patient, and encouraging`,
+      `- Use simple language suitable for everyone`,
+      `- Be extremely specific with amounts (in ₹), age limits, and required documents.`,
+      '',
+      `RESPONSE FORMAT — Use these section headings in ${lang.name}:`,
+      `1. Greet briefly in ${lang.name}.`,
+      `2. Directly answer their query.`,
+      `3. For each scheme, use:`,
+      `   - **${lbl.benefit}**: [translated benefit]`,
+      `   - **${lbl.elig}**: [translated eligibility]`,
+      `   - **${lbl.docs}**: [translated document list]`,
+      `   - **${lbl.steps}**: [translated steps]`,
+      `   - **${lbl.link}**: [URL — keep as-is]`,
+      '',
+      `CRITICAL INSTRUCTION: ONLY answer based on the RELEVANT SCHEMES DATA below. If data is missing, say so in ${lang.name} and suggest myScheme.gov.in. NEVER hallucinate scheme details.`,
+      '',
+      `RELEVANT SCHEMES DATA:`,
+      schemesContext,
+      '',
+      `⚠️ FINAL REMINDER: ${langRule}. Translate ALL English content to ${lang.name}.`,
+    ].join('\n');
 
     // Try Groq API if key is available
     const apiKey = process.env.GROQ_API_KEY;
@@ -73,8 +92,8 @@ IMPORTANT: Keep responses concise, well-structured, and factual.`;
               { role: 'system', content: systemPrompt },
               { role: 'user', content: message },
             ],
-            temperature: 0.7,
-            max_tokens: 1024,
+            temperature: 0.5,
+            max_tokens: 1200,
           }),
         }
       );
@@ -105,7 +124,7 @@ IMPORTANT: Keep responses concise, well-structured, and factual.`;
 }
 
 function generateFallbackResponse(
-  message: string,
+  _message: string,
   language: string,
   schemes: ReturnType<typeof searchSchemes>
 ): string {
@@ -118,7 +137,18 @@ function generateFallbackResponse(
     en: 'Hello!',
   };
 
+  // Localized labels for scheme fields
+  const labels: Record<string, Record<string, string>> = {
+    benefit:     { ta: 'ஆதாயம்', te: 'ప్రయోజనం', kn: 'ಪ್ರಯೋಜನ', ml: 'ആനുകൂല്യം', hi: 'लाभ', en: 'Benefit' },
+    eligibility: { ta: 'தகுதி', te: 'అర్హత', kn: 'ಅರ್ಹತೆ', ml: 'യോഗ്യത', hi: 'पात्रता', en: 'Eligibility' },
+    documents:   { ta: 'ஆவணங்கள்', te: 'పత్రాలు', kn: 'ದಾಖಲೆಗಳು', ml: 'രേഖകൾ', hi: 'दस्तावेज़', en: 'Documents' },
+    steps:       { ta: 'விண்ணப்பிக்கும் முறை', te: 'దరఖాస్తు విధానం', kn: 'ಅರ್ಜಿ ಸಲ್ಲಿಕೆ', ml: 'അപേക്ഷ നടപടി', hi: 'कैसे आवेदन करें', en: 'How to Apply' },
+    link:        { ta: 'அதிகாரப்பூர்வ இணைப்பு', te: 'అధికారిక లింక్', kn: 'ಅಧಿಕೃತ ಲಿಂಕ್', ml: 'ഔദ്യോഗിക ലിങ്ക്', hi: 'आधिकारिक लिंक', en: 'Official Link' },
+  };
+
+  const L = (key: string) => labels[key]?.[language] ?? labels[key]?.en ?? key;
   const greeting = greetings[language] || greetings.en;
+  const isLocal = ['ta', 'te', 'kn', 'ml', 'hi'].includes(language);
 
   if (schemes.length === 0) {
     const noResult: Record<string, string> = {
@@ -132,24 +162,43 @@ function generateFallbackResponse(
     return noResult[language] || noResult.en;
   }
 
-  // Build response from matched schemes
+  // Build scheme cards using local language fields exclusively for regional languages
   const schemeSummaries = schemes.slice(0, 3).map((s) => {
-    return `📋 **${s.name_en}** (${s.name_local})\n` +
+    if (isLocal) {
+      // PURE local experience: only use fields we know are localized in our database
+      const schemeName = s.name_local || s.name_en;
+      const schemeDesc = s.description_local || s.description_en;
+      
+      return (
+        `📋 **${schemeName}**\n` +
+        `   • ${schemeDesc}\n` +
+        `   • ${L('link')}: ${s.link}`
+      );
+    }
+
+    // English experience: use all available fields
+    const steps = s.steps.join(' → ');
+    return (
+      `📋 **${s.name_en}**\n` +
       `   • ${s.description_en}\n` +
-      `   • Benefit: ${s.benefit}\n` +
-      `   • Eligibility: ${s.eligibility}\n` +
-      `   • Documents: ${s.documents.join(', ')}\n` +
-      `   • Link: ${s.link}`;
+      `   • **${L('benefit')}:** ${s.benefit}\n` +
+      `   • **${L('eligibility')}:** ${s.eligibility}\n` +
+      `   • **${L('documents')}:** ${s.documents.join(', ')}\n` +
+      `   • **${L('steps')}:** ${steps}\n` +
+      `   • **${L('link')}:** ${s.link}`
+    );
   });
 
   const intro: Record<string, string> = {
     ta: `${greeting} உங்கள் கேள்விக்கு பொருத்தமான திட்டங்கள்:\n\n`,
     te: `${greeting} మీ ప్రశ్నకు సంబంధించిన పథకాలు:\n\n`,
-    kn: `${greeting} ನಿಮ್ಮ ಪ್ರಶ್ನೆಗೆ ಸಂಬಂಧಿಸಿದ ಯೋಜನೆಗಳು:\n\n`,
+    kn: `${greeting} ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಗಮನಿಸಿದಾಗ ಈ ಕೆಳಗಿನ ಯೋಜನೆಗಳು ಸೂಕ್ತವಾಗಿವೆ:\n\n`,
     ml: `${greeting} നിങ്ങളുടെ ചോദ്യവുമായി ബന്ധപ്പെട്ട പദ്ധതികൾ:\n\n`,
     hi: `${greeting} आपके प्रश्न से संबंधित योजनाएं:\n\n`,
     en: `${greeting} Here are relevant schemes for your query:\n\n`,
   };
 
-  return (intro[language] || intro.en) + schemeSummaries.join('\n\n');
+  const footer = isLocal ? `\n\n*(முழு விவரங்களுக்கு அதிகாரப்பூர்వ இணைப்பை கிளிக் செய்யவும். முழுமையான மொழிமாற்றத்திற்கு Groq API Key தேவைப்படுமா?)*` : '';
+
+  return (intro[language] || intro.en) + schemeSummaries.join('\n\n') + footer;
 }

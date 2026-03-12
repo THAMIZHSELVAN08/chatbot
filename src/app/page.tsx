@@ -5,9 +5,25 @@ import Link from 'next/link';
 import SchemeCard from '@/components/SchemeCard';
 import { Scheme, searchSchemes } from '@/lib/schemes';
 
+import { useLanguage } from '@/context/LanguageContext';
+import { translations } from '@/lib/translations';
+
 export default function Home() {
+  const { language } = useLanguage();
+  const t = translations[language.code] || translations.en;
+  
   const [featuredSchemes, setFeaturedSchemes] = useState<Scheme[]>([]);
   const [activeFilter, setActiveFilter] = useState('All');
+
+  // Font family based on language
+  const fontStyles = {
+    fontFamily: language.code === 'ta' ? 'Noto Sans Tamil, sans-serif' :
+                language.code === 'te' ? 'Noto Sans Telugu, sans-serif' :
+                language.code === 'kn' ? 'Noto Sans Kannada, sans-serif' :
+                language.code === 'ml' ? 'Noto Sans Malayalam, sans-serif' :
+                language.code === 'hi' ? 'Noto Sans Devanagari, sans-serif' :
+                'Poppins, sans-serif'
+  };
 
   useEffect(() => {
     // Initial fetch of some top schemes
@@ -28,41 +44,37 @@ export default function Home() {
   );
 
   return (
-    <div className="landing-page">
+    <div className="landing-page" style={fontStyles}>
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
-          <div className="hero-tag">🌟 Breaking Language Barriers in Governance</div>
-          <h1 className="hero-title">
-            Ask Anything About <br />
-            <span>Government Services</span>
-          </h1>
+          <div className="hero-tag">{t.heroTag}</div>
+          <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: t.heroTitle }} />
           <p className="hero-description">
-            An AI assistant that helps citizens understand government schemes, eligibility, 
-            documents, and application steps in 6 Indian languages. Voice-first, simple, and 100% free.
+            {t.heroDesc}
           </p>
           
           <div className="hero-actions">
             <Link href="/chatbot" className="hero-btn-primary">
-              <span className="btn-icon">💬</span> Start AI Chat
+              <span className="btn-icon">💬</span> {t.startChat}
             </Link>
             <Link href="/find-schemes" className="hero-btn-secondary">
-              <span className="btn-icon">🔍</span> Find Eligible Schemes
+              <span className="btn-icon">🔍</span> {t.findSchemes}
             </Link>
           </div>
 
           <div className="hero-stats">
             <div className="stat-item">
               <div className="stat-value">50+</div>
-              <div className="stat-label">Verified Schemes</div>
+              <div className="stat-label">{t.verifiedSchemes}</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">6+</div>
-              <div className="stat-label">Regional Languages</div>
+              <div className="stat-label">{t.regionalLangs}</div>
             </div>
             <div className="stat-item">
               <div className="stat-value">24x7</div>
-              <div className="stat-label">AI Assistance</div>
+              <div className="stat-label">{t.aiAssistance}</div>
             </div>
           </div>
         </div>
@@ -71,30 +83,30 @@ export default function Home() {
       {/* Features Section */}
       <section className="features-section content-page">
         <div className="section-header-center">
-          <h2 className="section-title">Designed for Empowerment</h2>
-          <p className="section-subtitle">Core capabilities that make SevaAI special</p>
+          <h2 className="section-title">{t.featuresTitle}</h2>
+          <p className="section-subtitle">{t.featuresSubtitle}</p>
         </div>
 
         <div className="features-grid">
           <div className="feature-card">
             <div className="feature-icon">🎙️</div>
-            <h3 className="feature-title">AI Chat Support</h3>
+            <h3 className="feature-title">{t.feature1Title}</h3>
             <p className="feature-desc">
-              Ask questions naturally via text or voice. Our AI understands your intent and provides precise answers.
+              {t.feature1Desc}
             </p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">🌐</div>
-            <h3 className="feature-title">Multilingual Access</h3>
+            <h3 className="feature-title">{t.feature2Title}</h3>
             <p className="feature-desc">
-              Supports English, Tamil, Telugu, Kannada, Malayalam, and Hindi. Speaks your language, literally.
+              {t.feature2Desc}
             </p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">⚖️</div>
-            <h3 className="feature-title">Scheme Recommendation</h3>
+            <h3 className="feature-title">{t.feature3Title}</h3>
             <p className="feature-desc">
-              Find schemes based on your age, income, and occupation using our smart eligibility engine.
+              {t.feature3Desc}
             </p>
           </div>
         </div>
@@ -104,8 +116,8 @@ export default function Home() {
       <section className="schemes-showcase content-page">
         <div className="section-header-row">
           <div>
-            <h2 className="section-title">Latest Govt. Schemes</h2>
-            <p className="section-subtitle">Updated database of state and national welfare programs</p>
+            <h2 className="section-title">{t.latestSchemes}</h2>
+            <p className="section-subtitle">{t.schemesSubtitle}</p>
           </div>
           
           <div className="filter-chips">
@@ -115,7 +127,7 @@ export default function Home() {
                 className={`filter-chip ${activeFilter === filter ? 'filter-chip-active' : ''}`}
                 onClick={() => setActiveFilter(filter)}
               >
-                {filter === 'All' ? 'All' : filter === 'National' ? 'National' : filter}
+                {filter === 'All' ? (language.code === 'ta' ? 'அனைத்தும்' : language.code === 'hi' ? 'सभी' : 'All') : filter === 'National' ? (language.code === 'ta' ? 'தேசிய' : 'National') : filter}
               </button>
             ))}
           </div>
@@ -129,7 +141,7 @@ export default function Home() {
         
         <div className="view-all-container">
           <Link href="/find-schemes" className="view-all-link">
-            Explore All 50+ Schemes →
+            {t.exploreAll}
           </Link>
         </div>
       </section>
@@ -140,10 +152,10 @@ export default function Home() {
           <div className="cta-voice-wave">
             <span></span><span></span><span></span><span></span><span></span>
           </div>
-          <h2 className="cta-title">Ready to find your government benefits?</h2>
-          <p className="cta-desc">Speak to SevaAI now in your own language.</p>
+          <h2 className="cta-title">{t.ctaTitle}</h2>
+          <p className="cta-desc">{t.ctaDesc}</p>
           <Link href="/chatbot" className="cta-btn">
-             Open AI Assistant
+             {t.openAssistant}
           </Link>
         </div>
       </section>

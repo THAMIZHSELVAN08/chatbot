@@ -7,6 +7,7 @@ export interface Scheme {
   name_en: string;
   name_local: string;
   category: string;
+  gender: string; // 'All' | 'Female' | 'Male' | 'Transgender'
   min_age: number;
   max_age: number;
   income_limit: number;
@@ -69,6 +70,7 @@ export interface SchemeFinderInput {
   income: number;
   occupation: string;
   state?: string;
+  gender?: string; // 'All' | 'Female' | 'Male' | 'Transgender'
 }
 
 export function findSchemesByProfile(input: SchemeFinderInput): Scheme[] {
@@ -102,6 +104,13 @@ export function findSchemesByProfile(input: SchemeFinderInput): Scheme[] {
     );
   }
 
+  // Filter by gender
+  if (input.gender && input.gender !== 'All') {
+    results = results.filter(
+      (s) => !s.gender || s.gender === 'All' || s.gender === input.gender
+    );
+  }
+
   return results;
 }
 
@@ -128,7 +137,7 @@ export function getSchemeSummaryForAI(schemes: Scheme[]): string {
   return schemes
     .map(
       (s) =>
-        `[${s.name_en}] (${s.state_name}) - ${s.benefit}. Eligibility: ${s.eligibility}. Documents: ${s.documents.join(', ')}. Steps: ${s.steps.join(' → ')}. Link: ${s.link}`
+        `[${s.name_en} / ${s.name_local}] (${s.state_name}) - ${s.benefit}. Eligibility: ${s.eligibility}. Description (local): ${s.description_local}. Documents: ${s.documents.join(', ')}. Steps: ${s.steps.join(' → ')}. Link: ${s.link}`
     )
     .join('\n\n');
 }

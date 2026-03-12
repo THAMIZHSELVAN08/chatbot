@@ -2,7 +2,11 @@
 
 import React, { useState } from 'react';
 import SchemeCard from '@/components/SchemeCard';
-import { Scheme, findSchemesByProfile, getAllOccupations } from '@/lib/schemes';
+import {
+  Scheme,
+  findSchemesByProfile,
+  getAllOccupations,
+} from '@/lib/schemes';
 
 const states = [
   { code: 'All', label: 'All States' },
@@ -12,16 +16,66 @@ const states = [
   { code: 'KL', label: 'Kerala' },
 ];
 
+import { useLanguage } from '@/context/LanguageContext';
+import { translations } from '@/lib/translations';
+
 export default function SchemeFinder() {
+  const { language } = useLanguage();
+  const t = translations[language.code] || translations.en;
+
   const [age, setAge] = useState('');
   const [income, setIncome] = useState('');
   const [occupation, setOccupation] = useState('');
   const [state, setState] = useState('All');
+  const [gender, setGender] = useState('All');
   const [results, setResults] = useState<Scheme[]>([]);
   const [searched, setSearched] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const occupations = getAllOccupations();
+
+  // Font family based on language
+  const fontStyles = {
+    fontFamily:
+      language.code === 'ta'
+        ? 'Noto Sans Tamil, sans-serif'
+        : language.code === 'te'
+        ? 'Noto Sans Telugu, sans-serif'
+        : language.code === 'kn'
+        ? 'Noto Sans Kannada, sans-serif'
+        : language.code === 'ml'
+        ? 'Noto Sans Malayalam, sans-serif'
+        : language.code === 'hi'
+        ? 'Noto Sans Devanagari, sans-serif'
+        : 'Poppins, sans-serif',
+  };
+
+  const occupationPlaceholderByLang: Record<string, string> = {
+    ta: 'தொழிலைத் தேர்ந்தெடுக்கவும்',
+    te: 'వృత్తిని ఎంచుకోండి',
+    kn: 'ವೃತ್ತಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ',
+    ml: 'തൊഴിൽ തിരഞ്ഞെടുക്കുക',
+    hi: 'व्यवसाय चुनें',
+    en: 'Select Occupation',
+  };
+
+  const allStatesLabelByLang: Record<string, string> = {
+    ta: 'அனைத்து மாநிலங்களும்',
+    te: 'All States',
+    kn: 'ಎಲ್ಲಾ ರಾಜ್ಯಗಳು',
+    ml: 'എല്ലാ സംസ്ഥാനങ്ങളും',
+    hi: 'सभी राज्य',
+    en: 'All States',
+  };
+
+  const loadingTextByLang: Record<string, string> = {
+    ta: 'திட்டங்களைக் கண்டறிகிறது...',
+    te: 'పథకాలను కనుగొంటోంది...',
+    kn: 'ಯೋಜನೆಗಳನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ...',
+    ml: 'പദ്ധതികൾ കണ്ടെത്തുന്നു...',
+    hi: 'योजनाएं खोजी जा रही हैं...',
+    en: 'Finding Schemes…',
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,6 +89,7 @@ export default function SchemeFinder() {
       income: parseInt(income) || 0,
       occupation,
       state,
+      gender,
     });
 
     setResults(matches);
@@ -47,20 +102,21 @@ export default function SchemeFinder() {
     setIncome('');
     setOccupation('');
     setState('All');
+    setGender('All');
     setResults([]);
     setSearched(false);
   };
 
   return (
-    <div className="scheme-finder">
+    <div className="scheme-finder" style={fontStyles}>
       {/* Form */}
       <div className="finder-card">
         <div className="finder-card-header">
           <h2 className="finder-card-title">
-            <span>🔍</span> Enter Your Details
+            <span>🔍</span> {t.finderTitle}
           </h2>
           <p className="finder-card-desc">
-            We&apos;ll match you with government schemes you&apos;re eligible for
+            {t.finderDesc}
           </p>
         </div>
 
@@ -69,7 +125,7 @@ export default function SchemeFinder() {
             {/* Age */}
             <div className="finder-field">
               <label className="finder-label" htmlFor="finder-age">
-                Age
+                {t.ageLabel}
               </label>
               <input
                 id="finder-age"
@@ -87,7 +143,7 @@ export default function SchemeFinder() {
             {/* Annual Income */}
             <div className="finder-field">
               <label className="finder-label" htmlFor="finder-income">
-                Annual Income (₹)
+                {t.incomeLabel}
               </label>
               <input
                 id="finder-income"
@@ -104,7 +160,7 @@ export default function SchemeFinder() {
             {/* Occupation */}
             <div className="finder-field">
               <label className="finder-label" htmlFor="finder-occupation">
-                Occupation
+                {t.occLabel}
               </label>
               <select
                 id="finder-occupation"
@@ -113,7 +169,10 @@ export default function SchemeFinder() {
                 className="finder-select"
                 required
               >
-                <option value="">Select Occupation</option>
+                <option value="">
+                  {occupationPlaceholderByLang[language.code] ||
+                    occupationPlaceholderByLang.en}
+                </option>
                 {occupations.map((occ) => (
                   <option key={occ} value={occ}>
                     {occ}
@@ -125,7 +184,7 @@ export default function SchemeFinder() {
             {/* State */}
             <div className="finder-field">
               <label className="finder-label" htmlFor="finder-state">
-                State
+                {t.stateLabel}
               </label>
               <select
                 id="finder-state"
@@ -135,9 +194,30 @@ export default function SchemeFinder() {
               >
                 {states.map((s) => (
                   <option key={s.code} value={s.code}>
-                    {s.label}
+                    {s.code === 'All'
+                      ? allStatesLabelByLang[language.code] ||
+                        allStatesLabelByLang.en
+                      : s.label}
                   </option>
                 ))}
+              </select>
+            </div>
+
+            {/* Gender */}
+            <div className="finder-field">
+              <label className="finder-label" htmlFor="finder-gender">
+                {t.genderLabel}
+              </label>
+              <select
+                id="finder-gender"
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                className="finder-select"
+              >
+                <option value="All">{t.allGenders}</option>
+                <option value="Male">{t.male}</option>
+                <option value="Female">{t.female}</option>
+                <option value="Transgender">{t.transgender}</option>
               </select>
             </div>
           </div>
@@ -146,7 +226,8 @@ export default function SchemeFinder() {
             <button type="submit" className="finder-submit" disabled={isLoading}>
               {isLoading ? (
                 <>
-                  <div className="spinner" /> Finding Schemes…
+                  <div className="spinner" />{' '}
+                  {loadingTextByLang[language.code] || loadingTextByLang.en}
                 </>
               ) : (
                 <>
@@ -154,13 +235,13 @@ export default function SchemeFinder() {
                     <circle cx="11" cy="11" r="8" />
                     <path d="m21 21-4.35-4.35" />
                   </svg>
-                  Find Eligible Schemes
+                  {t.findBtn}
                 </>
               )}
             </button>
             {searched && (
               <button type="button" onClick={handleReset} className="finder-reset">
-                Reset
+                {t.resetBtn}
               </button>
             )}
           </div>
@@ -174,17 +255,18 @@ export default function SchemeFinder() {
             <h3>
               {results.length > 0 ? (
                 <>
-                  ✅ <strong>{results.length}</strong> scheme{results.length !== 1 ? 's' : ''} found
-                  {age ? ` for age ${age}` : ''}
-                  {income ? `, income ₹${parseInt(income).toLocaleString('en-IN')}` : ''}
-                  {occupation ? `, ${occupation}` : ''}
+                  ✅ <strong>{results.length}</strong> {t.schemesFound}
                 </>
               ) : (
-                <>❌ No matching schemes found. Try adjusting your filters.</>
+                <>{t.noSchemes}</>
               )}
             </h3>
             <p className="finder-source">
-              Source: myScheme.gov.in database · Last updated: March 2026
+              {language.code === 'ta'
+                ? 'ஆதாரம்: myScheme.gov.in தரவுத்தளம் · கடைசியாக புதுப்பிக்கப்பட்டது: மார்ச் 2026'
+                : language.code === 'hi'
+                ? 'स्रोत: myScheme.gov.in डेटाबेस · अंतिम अपडेट: मार्च 2026'
+                : 'Source: myScheme.gov.in database · Last updated: March 2026'}
             </p>
           </div>
 

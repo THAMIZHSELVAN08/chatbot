@@ -1,6 +1,25 @@
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function HowItWorksPage() {
+  const { language } = useLanguage();
+
+  // Keep content mostly English for now, but ensure correct script fonts
+  const fontStyles = {
+    fontFamily:
+      language.code === 'ta'
+        ? 'Noto Sans Tamil, sans-serif'
+        : language.code === 'te'
+        ? 'Noto Sans Telugu, sans-serif'
+        : language.code === 'kn'
+        ? 'Noto Sans Kannada, sans-serif'
+        : language.code === 'ml'
+        ? 'Noto Sans Malayalam, sans-serif'
+        : language.code === 'hi'
+        ? 'Noto Sans Devanagari, sans-serif'
+        : 'Poppins, sans-serif',
+  };
+
   const steps = [
     {
       title: 'Analyze Your Profile',
@@ -25,7 +44,7 @@ export default function HowItWorksPage() {
   ];
 
   return (
-    <div className="content-page">
+    <div className="content-page" style={fontStyles}>
       <div className="card-page prose">
         <h1>How The System Works</h1>
         <p>

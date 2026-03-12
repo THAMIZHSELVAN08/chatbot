@@ -5,6 +5,7 @@ import LanguageBar from '@/components/LanguageBar';
 import VoiceRecorder from '@/components/VoiceRecorder';
 import ChatBubble, { Message } from '@/components/ChatBubble';
 import { getLanguageByCode, detectLanguageFromText } from '@/lib/languages';
+import { useProfessionalTTS } from '@/components/VoiceSynth';
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
@@ -398,29 +399,51 @@ const quickTopics = [
   { text: 'Women empowerment schemes', label: 'Women Empowerment' },
 ];
 
+import { useLanguage } from '@/context/LanguageContext';
+
 export default function ChatbotPage() {
   const [messages, setMessages] = useState<Message[]>([]);
-  const [currentLang, setCurrentLang] = useState('ta');
+  const { language, setLanguage } = useLanguage();
   const [inputText, setInputText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [voiceEnabled, setVoiceEnabled] = useState(true);
+  const [isSpeaking, setIsSpeaking] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const { speak, stop } = useProfessionalTTS();
 
-  const lang = getLanguageByCode(currentLang);
+  const lang = language;
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  // Track speaking state
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsSpeaking(window.speechSynthesis?.speaking ?? false);
+    }, 250);
+    return () => clearInterval(interval);
+  }, []);
+
+  // Speak a message aloud in the given language
+  const speakMessage = useCallback((text: string, langCode: string) => {
+    const langObj = getLanguageByCode(langCode);
+    speak({ text, lang: langObj.speechCode, rate: 0.9, pitch: 1.05 });
+  }, [speak]);
+
   const sendMessage = useCallback(async (text: string, language: string, isVoice = false) => {
     if (!text.trim()) return;
+
     const detectedLang = detectLanguageFromText(text);
-    if (detectedLang !== 'en') setCurrentLang(detectedLang);
+    // Only switch bar if user typed in a regional script — respect their explicit bar selection otherwise
+    const effectiveLang = detectedLang !== 'en' ? detectedLang : language;
+    if (detectedLang !== 'en') setLanguage(detectedLang);
 
     const userMessage: Message = {
       id: Date.now().toString(),
       role: 'user',
       content: text,
-      language,
+      language: effectiveLang,
       timestamp: new Date(),
       isVoice,
     };
@@ -429,36 +452,47 @@ export default function ChatbotPage() {
     setIsLoading(true);
 
     try {
+      // Always send the effective language to the API so response is in the right language
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: text, language }),
+        body: JSON.stringify({ message: text, language: effectiveLang }),
       });
       const data = await response.json();
+      const replyText = data.reply || 'I apologize, but I encountered an issue. Please try again.';
+
       setMessages((prev) => [...prev, {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: data.reply || 'I apologize, but I encountered an issue. Please try again.',
-        language,
+        content: replyText,
+        // Reply is always tagged with the effective language
+        language: effectiveLang,
         timestamp: new Date(),
       }]);
+
+      // Auto-speak the reply using the SAME language the user is using
+      if (voiceEnabled) {
+        setTimeout(() => speakMessage(replyText, effectiveLang), 300);
+      }
     } catch {
+      const errText = 'Connection error. Please check your internet and try again.';
       setMessages((prev) => [...prev, {
         id: (Date.now() + 2).toString(),
         role: 'assistant',
-        content: 'Connection error. Please check your internet and try again.',
-        language: 'en',
+        content: errText,
+        language: effectiveLang,
         timestamp: new Date(),
       }]);
+      if (voiceEnabled) setTimeout(() => speakMessage(errText, effectiveLang), 300);
     } finally {
       setIsLoading(false);
     }
-  }, []);
+  }, [voiceEnabled, speakMessage]);
 
   const handleTextSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputText.trim() || isLoading) return;
-    sendMessage(inputText, currentLang, false);
+    sendMessage(inputText, language.code, false);
     setInputText('');
   };
 
@@ -477,7 +511,7 @@ export default function ChatbotPage() {
                   <button
                     key={i}
                     className="cb-topic-btn"
-                    onClick={() => sendMessage(t.text, currentLang)}
+                    onClick={() => sendMessage(t.text, language.code)}
                     disabled={isLoading}
                   >
                     <span className="cb-topic-dot" />
@@ -521,16 +555,45 @@ export default function ChatbotPage() {
                 </div>
               </div>
             </div>
-            {messages.length > 0 && (
-              <button className="cb-clear-btn" onClick={() => setMessages([])}>
-                Clear conversation
+            <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+              {/* Voice toggle */}
+              <button
+                onClick={() => { stop(); setVoiceEnabled(v => !v); }}
+                className="cb-clear-btn"
+                title={voiceEnabled ? 'Mute voice responses' : 'Enable voice responses'}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: '5px',
+                  background: voiceEnabled ? 'rgba(22,163,74,0.07)' : 'transparent',
+                  borderColor: voiceEnabled ? 'rgba(22,163,74,0.25)' : undefined,
+                  color: voiceEnabled ? '#16a34a' : undefined,
+                }}
+              >
+                {isSpeaking ? (
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+                  </svg>
+                ) : (
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    {voiceEnabled && <>
+                      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    </>}
+                    {!voiceEnabled && <line x1="23" y1="9" x2="17" y2="15"/>}
+                  </svg>
+                )}
+                {isSpeaking ? 'Stop' : voiceEnabled ? 'Voice On' : 'Voice Off'}
               </button>
-            )}
+              {messages.length > 0 && (
+                <button className="cb-clear-btn" onClick={() => { stop(); setMessages([]); }}>
+                  Clear conversation
+                </button>
+              )}
+            </div>
           </div>
 
-          {/* Language Bar */}
           <div className="cb-lang-bar-wrap">
-            <LanguageBar currentLang={currentLang} onLanguageChange={setCurrentLang} />
+            <LanguageBar />
           </div>
 
           {/* Messages */}
@@ -547,7 +610,13 @@ export default function ChatbotPage() {
             ) : (
               <>
                 {messages.map((msg) => (
-                  <ChatBubble key={msg.id} message={msg} />
+                  <ChatBubble
+                    key={msg.id}
+                    message={msg}
+                    onSpeak={(text, lang) => speakMessage(text, lang)}
+                    onStop={stop}
+                    isSpeaking={isSpeaking}
+                  />
                 ))}
                 {isLoading && (
                   <div className="cb-typing">
@@ -565,8 +634,8 @@ export default function ChatbotPage() {
           <div className="cb-input-area">
             <div className="cb-voice-row">
               <VoiceRecorder
-                currentLang={currentLang}
-                onTranscript={(text) => sendMessage(text, currentLang, true)}
+                currentLang={language.code}
+                onTranscript={(text) => sendMessage(text, language.code, true)}
                 disabled={isLoading}
               />
             </div>

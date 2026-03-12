@@ -2,20 +2,19 @@
 
 import React from 'react';
 import { languages } from '@/lib/languages';
+import { useLanguage } from '@/context/LanguageContext';
 
-interface LanguageBarProps {
-  currentLang: string;
-  onLanguageChange: (code: string) => void;
-}
+export default function LanguageBar() {
+  const { language, setLanguage } = useLanguage();
+  const currentLang = language.code;
 
-export default function LanguageBar({ currentLang, onLanguageChange }: LanguageBarProps) {
   return (
     <div className="language-bar">
       <div className="language-bar-inner">
         {languages.map((lang) => (
           <button
             key={lang.code}
-            onClick={() => onLanguageChange(lang.code)}
+            onClick={() => setLanguage(lang.code)}
             className={`lang-btn ${currentLang === lang.code ? 'lang-btn-active' : ''}`}
             title={`${lang.name} (${lang.state})`}
           >
@@ -27,7 +26,7 @@ export default function LanguageBar({ currentLang, onLanguageChange }: LanguageB
         ))}
       </div>
       <div className="lang-detected">
-        Auto-detected: <strong>{languages.find(l => l.code === currentLang)?.localName}</strong>
+        Current Choice: <strong>{languages.find(l => l.code === currentLang)?.localName}</strong>
         <span className="lang-state">
           {' '}({languages.find(l => l.code === currentLang)?.state})
         </span>

@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/context/LanguageContext';
+import { languages } from '@/lib/languages';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -42,17 +44,22 @@ const styles = `
   .ns-brand {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 10px;          /* logo image sits beside the text block */
     text-decoration: none;
     flex-shrink: 0;
   }
+
+  /* Logo: natural colours, correct height, no crushing filter */
   .ns-brand-logo {
     height: 36px;
     width: auto;
     display: block;
     object-fit: contain;
-    filter: brightness(0) saturate(100%) invert(31%) sepia(98%) saturate(1200%) hue-rotate(220deg);
+    /* If your logo.png is a plain black/white file and you need it
+       tinted indigo, uncomment the line below:
+    filter: brightness(0) saturate(100%) invert(31%) sepia(98%) saturate(1200%) hue-rotate(220deg); */
   }
+
   .ns-brand-text {
     display: flex;
     flex-direction: column;
@@ -116,6 +123,71 @@ const styles = `
     height: 2px;
     background: #4f46e5;
     border-radius: 2px 2px 0 0;
+  }
+
+  /* Language Dropdown */
+  .ns-lang-selector {
+    position: relative;
+    margin-left: 8px;
+  }
+  .ns-lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: #f8faff;
+    border: 1px solid rgba(99, 102, 241, 0.15);
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4f46e5;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ns-lang-btn:hover {
+    background: #ffffff;
+    border-color: #4f46e5;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
+  }
+  .ns-lang-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 160px;
+    background: #ffffff;
+    border: 1px solid rgba(99, 102, 241, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    animation: ns-fade-in 0.2s ease-out;
+  }
+  @keyframes ns-fade-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .ns-lang-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #4b5563;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .ns-lang-option:hover {
+    background: rgba(99, 102, 241, 0.08);
+    color: #4f46e5;
+  }
+  .ns-lang-option.active {
+    background: rgba(99, 102, 241, 0.12);
+    color: #4f46e5;
+    font-weight: 700;
   }
 
   /* Separator */
@@ -233,7 +305,7 @@ const styles = `
   }
 
   /* ── Responsive ── */
-  @media (max-width: 860px) {
+  @media (max-width: 960px) {
     .ns-link        { display: none; }
     .ns-sep         { display: none; }
     .ns-status-pill { display: none; }
@@ -247,22 +319,26 @@ const styles = `
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { language, setLanguage } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const [logoError, setLogoError] = useState(false);
 
   useEffect(() => { setMobileOpen(false); }, [pathname]);
 
   useEffect(() => {
-    if (!mobileOpen) return;
     const handler = (e: MouseEvent) => {
       const t = e.target as HTMLElement;
-      if (!t.closest('.ns-nav') && !t.closest('.ns-mobile-menu')) {
+      if (mobileOpen && !t.closest('.ns-nav') && !t.closest('.ns-mobile-menu')) {
         setMobileOpen(false);
+      }
+      if (langOpen && !t.closest('.ns-lang-selector')) {
+        setLangOpen(false);
       }
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
-  }, [mobileOpen]);
+  }, [mobileOpen, langOpen]);
 
   return (
     <>
@@ -271,27 +347,27 @@ export default function Navbar() {
       <nav className="ns-nav">
         <div className="ns-nav-inner">
 
-          {/* Left: Logo */}
+          {/* Left: Logo image beside brand text */}
           <Link href="/" className="ns-brand">
+            {!logoError ? (
+              <Image
+                src="/logo.png"
+                alt="SevaAI"
+                width={120}
+                height={36}
+                className="ns-brand-logo"
+                priority
+                onError={() => setLogoError(true)}
+              />
+            ) : (
+              <span className="ns-brand-name">SevaAI</span>
+            )}
             <div className="ns-brand-text">
-              {!logoError ? (
-                <Image
-                  src="/public/logo.png"
-                  alt="SevaAI"
-                  width={120}
-                  height={36}
-                  className="ns-brand-logo"
-                  priority
-                  onError={() => setLogoError(true)}
-                />
-              ) : (
-                <span className="ns-brand-name">SevaAI</span>
-              )}
               <span className="ns-brand-sub">Government Schemes Assistant</span>
             </div>
           </Link>
 
-          {/* Right: Links + pill + hamburger */}
+          {/* Right: Links + language selector + pill + hamburger */}
           <div className="ns-right">
             {navLinks.map((link) => (
               <Link
@@ -302,6 +378,44 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+
+            <div className="ns-lang-selector">
+              <button
+                className="ns-lang-btn"
+                onClick={() => setLangOpen(!langOpen)}
+              >
+                <span>{language.localName}</span>
+                <svg
+                  width="12" height="12" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"
+                  style={{ transition: '0.2s', transform: langOpen ? 'rotate(180deg)' : 'none' }}
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+
+              {langOpen && (
+                <div className="ns-lang-dropdown">
+                  {languages.map((l) => (
+                    <div
+                      key={l.code}
+                      className={`ns-lang-option${language.code === l.code ? ' active' : ''}`}
+                      onClick={() => {
+                        setLanguage(l.code);
+                        setLangOpen(false);
+                      }}
+                    >
+                      {l.localName}
+                      {language.code === l.code && (
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                          <path d="M20 6L9 17L4 12" />
+                        </svg>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div className="ns-sep" />
 

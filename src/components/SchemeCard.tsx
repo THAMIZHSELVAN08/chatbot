@@ -59,7 +59,7 @@ export default function SchemeCard({ scheme }: SchemeCardProps) {
         className="scheme-link"
         style={{ color }}
       >
-        Apply Now →
+        View Details
       </a>
     </div>
   );

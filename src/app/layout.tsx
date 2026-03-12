@@ -22,6 +22,7 @@ export const metadata: Metadata = {
 };
 
 import Navbar from '@/components/Navbar';
+import Providers from '@/components/Providers';
 
 export default function RootLayout({
   children,
@@ -39,8 +40,10 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Navbar />
-        <main style={{ paddingTop: '64px', minHeight: 'calc(100vh - 64px)' }}>{children}</main>
+        <Providers>
+          <Navbar />
+          <main style={{ paddingTop: '64px', minHeight: 'calc(100vh - 64px)' }}>{children}</main>
+        </Providers>
         
         <footer className="footer">
           <div className="footer-content">
